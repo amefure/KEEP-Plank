@@ -21,14 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Firebase
         FirebaseApp.configure()
 
-        // 通知申請
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, _ in
-            if granted {
-                UNUserNotificationCenter.current().delegate = self
-            }
-        }
-
         return true
     }
 

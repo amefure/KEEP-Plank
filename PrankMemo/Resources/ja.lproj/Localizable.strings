@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  PrankMemo
+
+  Created by t&a on 2024/08/19.
+  
+*/
+
+// MARK: - Dialog
+"dialog_title" = "お知らせ";
+"dialog_error_title" = "エラー";
+
+"dialog_button_ok" = "OK";
+"dialog_button_cancel" = "キャンセル";

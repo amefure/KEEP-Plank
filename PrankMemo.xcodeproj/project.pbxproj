@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5A22C73569400BAEE37 /* Images.xcassets */; };
+		1280A5A82C73636000BAEE37 /* Prank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5A72C73636000BAEE37 /* Prank.swift */; };
+		1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */; };
+		1280A5AD2C73644000BAEE37 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AC2C73644000BAEE37 /* UserDefaultsRepository.swift */; };
+		1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5B02C7364B900BAEE37 /* DeviceSizeUtility.swift */; };
+		1280A5B32C7364C200BAEE37 /* DateFormatUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5B22C7364C200BAEE37 /* DateFormatUtility.swift */; };
+		1280A5B62C7364F700BAEE37 /* ExUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5B52C7364F700BAEE37 /* ExUIApplication.swift */; };
+		1280A5B82C73651300BAEE37 /* ExCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5B72C73651300BAEE37 /* ExCollection.swift */; };
+		1280A5BB2C73655200BAEE37 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5BA2C73655200BAEE37 /* RealmRepository.swift */; };
+		1280A5C22C73657000BAEE37 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5BE2C73657000BAEE37 /* RealmConfig.swift */; };
+		1280A5C42C73668C00BAEE37 /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5C32C73668C00BAEE37 /* RootEnvironment.swift */; };
+		1280A5C72C73671300BAEE37 /* AppNotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5C62C73671300BAEE37 /* AppNotifyManager.swift */; };
+		1280A5CA2C73674200BAEE37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5C82C73674200BAEE37 /* Localizable.strings */; };
+		1280A5CE2C73684400BAEE37 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5CC2C73684400BAEE37 /* Assets.swift */; };
+		1280A5CF2C73684400BAEE37 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5CD2C73684400BAEE37 /* Strings.swift */; };
+		1280A5D22C736A6F00BAEE37 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5D12C736A6E00BAEE37 /* PrivacyInfo.xcprivacy */; };
+		1280A5D42C736A7D00BAEE37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5D32C736A7D00BAEE37 /* GoogleService-Info.plist */; };
 		12B72C532C7355AD00DCFE43 /* PrankMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */; };
 		12B72C552C7355AD00DCFE43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C542C7355AD00DCFE43 /* ContentView.swift */; };
 		12B72C572C7355AE00DCFE43 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B72C562C7355AE00DCFE43 /* Colors.xcassets */; };
@@ -17,6 +33,24 @@
 
 /* Begin PBXFileReference section */
 		1280A5A22C73569400BAEE37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1280A5A72C73636000BAEE37 /* Prank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prank.swift; sourceTree = "<group>"; };
+		1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependency.swift; sourceTree = "<group>"; };
+		1280A5AC2C73644000BAEE37 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		1280A5B02C7364B900BAEE37 /* DeviceSizeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSizeUtility.swift; sourceTree = "<group>"; };
+		1280A5B22C7364C200BAEE37 /* DateFormatUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatUtility.swift; sourceTree = "<group>"; };
+		1280A5B52C7364F700BAEE37 /* ExUIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIApplication.swift; sourceTree = "<group>"; };
+		1280A5B72C73651300BAEE37 /* ExCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExCollection.swift; sourceTree = "<group>"; };
+		1280A5BA2C73655200BAEE37 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		1280A5BE2C73657000BAEE37 /* RealmConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		1280A5C32C73668C00BAEE37 /* RootEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
+		1280A5C62C73671300BAEE37 /* AppNotifyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifyManager.swift; sourceTree = "<group>"; };
+		1280A5C92C73674200BAEE37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1280A5CB2C7367A500BAEE37 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1280A5CC2C73684400BAEE37 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1280A5CD2C73684400BAEE37 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		1280A5D02C736A0800BAEE37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1280A5D12C736A6E00BAEE37 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1280A5D32C736A7D00BAEE37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		12B72C4F2C7355AD00DCFE43 /* PrankMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrankMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrankMemoApp.swift; sourceTree = "<group>"; };
 		12B72C542C7355AD00DCFE43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +78,7 @@
 			children = (
 				12B72C562C7355AE00DCFE43 /* Colors.xcassets */,
 				1280A5A22C73569400BAEE37 /* Images.xcassets */,
+				1280A5C82C73674200BAEE37 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -51,6 +86,8 @@
 		1280A5A02C73567500BAEE37 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				1280A5CC2C73684400BAEE37 /* Assets.swift */,
+				1280A5CD2C73684400BAEE37 /* Strings.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -67,6 +104,8 @@
 		1280A5A42C7356B600BAEE37 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				1280A5A92C7363DB00BAEE37 /* DI */,
+				1280A5B92C73654900BAEE37 /* DB */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -74,6 +113,8 @@
 		1280A5A52C7356BF00BAEE37 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1280A5A72C73636000BAEE37 /* Prank.swift */,
+				1280A5BF2C73657000BAEE37 /* Config */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -81,8 +122,69 @@
 		1280A5A62C7356C400BAEE37 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1280A5C32C73668C00BAEE37 /* RootEnvironment.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1280A5A92C7363DB00BAEE37 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		1280A5AE2C73649A00BAEE37 /* Extension&Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5B42C7364F000BAEE37 /* Extenstion */,
+				1280A5AF2C7364B100BAEE37 /* Utility */,
+			);
+			path = "Extension&Utility";
+			sourceTree = "<group>";
+		};
+		1280A5AF2C7364B100BAEE37 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5B02C7364B900BAEE37 /* DeviceSizeUtility.swift */,
+				1280A5B22C7364C200BAEE37 /* DateFormatUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1280A5B42C7364F000BAEE37 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5B52C7364F700BAEE37 /* ExUIApplication.swift */,
+				1280A5B72C73651300BAEE37 /* ExCollection.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		1280A5B92C73654900BAEE37 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5BA2C73655200BAEE37 /* RealmRepository.swift */,
+				1280A5AC2C73644000BAEE37 /* UserDefaultsRepository.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		1280A5BF2C73657000BAEE37 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5BE2C73657000BAEE37 /* RealmConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		1280A5C52C73670500BAEE37 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1280A5C62C73671300BAEE37 /* AppNotifyManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		12B72C462C7355AD00DCFE43 = {
@@ -106,12 +208,17 @@
 		12B72C512C7355AD00DCFE43 /* PrankMemo */ = {
 			isa = PBXGroup;
 			children = (
+				1280A5D02C736A0800BAEE37 /* Info.plist */,
+				1280A5D12C736A6E00BAEE37 /* PrivacyInfo.xcprivacy */,
+				1280A5D32C736A7D00BAEE37 /* GoogleService-Info.plist */,
 				1280A5A02C73567500BAEE37 /* Generated */,
 				1280A59F2C73567000BAEE37 /* Resources */,
+				1280A5AE2C73649A00BAEE37 /* Extension&Utility */,
 				1280A5A12C73567900BAEE37 /* View */,
 				1280A5A62C7356C400BAEE37 /* ViewModel */,
 				1280A5A52C7356BF00BAEE37 /* Models */,
 				1280A5A42C7356B600BAEE37 /* Repository */,
+				1280A5C52C73670500BAEE37 /* Managers */,
 				12B72C582C7355AE00DCFE43 /* Preview Content */,
 			);
 			path = PrankMemo;
@@ -186,6 +293,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 12B72C462C7355AD00DCFE43;
 			productRefGroup = 12B72C502C7355AD00DCFE43 /* Products */;
@@ -203,8 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */,
+				1280A5CA2C73674200BAEE37 /* Localizable.strings in Resources */,
 				12B72C5A2C7355AE00DCFE43 /* Preview Assets.xcassets in Resources */,
+				1280A5D22C736A6F00BAEE37 /* PrivacyInfo.xcprivacy in Resources */,
 				12B72C572C7355AE00DCFE43 /* Colors.xcassets in Resources */,
+				1280A5D42C736A7D00BAEE37 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,12 +368,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */,
+				1280A5C42C73668C00BAEE37 /* RootEnvironment.swift in Sources */,
 				12B72C552C7355AD00DCFE43 /* ContentView.swift in Sources */,
 				12B72C532C7355AD00DCFE43 /* PrankMemoApp.swift in Sources */,
+				1280A5C72C73671300BAEE37 /* AppNotifyManager.swift in Sources */,
+				1280A5C22C73657000BAEE37 /* RealmConfig.swift in Sources */,
+				1280A5B82C73651300BAEE37 /* ExCollection.swift in Sources */,
+				1280A5CF2C73684400BAEE37 /* Strings.swift in Sources */,
+				1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */,
+				1280A5CE2C73684400BAEE37 /* Assets.swift in Sources */,
+				1280A5BB2C73655200BAEE37 /* RealmRepository.swift in Sources */,
+				1280A5A82C73636000BAEE37 /* Prank.swift in Sources */,
+				1280A5AD2C73644000BAEE37 /* UserDefaultsRepository.swift in Sources */,
+				1280A5B32C7364C200BAEE37 /* DateFormatUtility.swift in Sources */,
+				1280A5B62C7364F700BAEE37 /* ExUIApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1280A5C82C73674200BAEE37 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1280A5C92C73674200BAEE37 /* en */,
+				1280A5CB2C7367A500BAEE37 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		12B72C5B2C7355AE00DCFE43 /* Debug */ = {
@@ -270,6 +406,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -333,6 +470,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -395,7 +533,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PrankMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrankMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,7 +565,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PrankMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrankMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
