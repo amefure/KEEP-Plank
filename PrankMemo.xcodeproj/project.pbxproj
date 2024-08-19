@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5A22C73569400BAEE37 /* Images.xcassets */; };
 		12B72C532C7355AD00DCFE43 /* PrankMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */; };
 		12B72C552C7355AD00DCFE43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C542C7355AD00DCFE43 /* ContentView.swift */; };
-		12B72C572C7355AE00DCFE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B72C562C7355AE00DCFE43 /* Assets.xcassets */; };
+		12B72C572C7355AE00DCFE43 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B72C562C7355AE00DCFE43 /* Colors.xcassets */; };
 		12B72C5A2C7355AE00DCFE43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B72C592C7355AE00DCFE43 /* Preview Assets.xcassets */; };
+		62228FE86D3992C64D88285C /* Pods_PrankMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2299CB0AC1184105952E6BB6 /* Pods_PrankMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1280A5A22C73569400BAEE37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		12B72C4F2C7355AD00DCFE43 /* PrankMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrankMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrankMemoApp.swift; sourceTree = "<group>"; };
 		12B72C542C7355AD00DCFE43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		12B72C562C7355AE00DCFE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12B72C562C7355AE00DCFE43 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		12B72C592C7355AE00DCFE43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2299CB0AC1184105952E6BB6 /* Pods_PrankMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrankMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC0119FBD0015C007FE2FE5 /* Pods-PrankMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrankMemo.release.xcconfig"; path = "Target Support Files/Pods-PrankMemo/Pods-PrankMemo.release.xcconfig"; sourceTree = "<group>"; };
+		EE4B4DFE92CBC1E26E2791E5 /* Pods-PrankMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrankMemo.debug.xcconfig"; path = "Target Support Files/Pods-PrankMemo/Pods-PrankMemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +32,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62228FE86D3992C64D88285C /* Pods_PrankMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1280A59F2C73567000BAEE37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12B72C562C7355AE00DCFE43 /* Colors.xcassets */,
+				1280A5A22C73569400BAEE37 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1280A5A02C73567500BAEE37 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		1280A5A12C73567900BAEE37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */,
+				12B72C542C7355AD00DCFE43 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1280A5A42C7356B600BAEE37 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1280A5A52C7356BF00BAEE37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1280A5A62C7356C400BAEE37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		12B72C462C7355AD00DCFE43 = {
 			isa = PBXGroup;
 			children = (
 				12B72C512C7355AD00DCFE43 /* PrankMemo */,
 				12B72C502C7355AD00DCFE43 /* Products */,
+				CDDB72F5B071FF7B158EB101 /* Pods */,
+				832606836F29AAB749F23CDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +106,12 @@
 		12B72C512C7355AD00DCFE43 /* PrankMemo */ = {
 			isa = PBXGroup;
 			children = (
-				12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */,
-				12B72C542C7355AD00DCFE43 /* ContentView.swift */,
-				12B72C562C7355AE00DCFE43 /* Assets.xcassets */,
+				1280A5A02C73567500BAEE37 /* Generated */,
+				1280A59F2C73567000BAEE37 /* Resources */,
+				1280A5A12C73567900BAEE37 /* View */,
+				1280A5A62C7356C400BAEE37 /* ViewModel */,
+				1280A5A52C7356BF00BAEE37 /* Models */,
+				1280A5A42C7356B600BAEE37 /* Repository */,
 				12B72C582C7355AE00DCFE43 /* Preview Content */,
 			);
 			path = PrankMemo;
@@ -67,6 +125,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		832606836F29AAB749F23CDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2299CB0AC1184105952E6BB6 /* Pods_PrankMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDDB72F5B071FF7B158EB101 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE4B4DFE92CBC1E26E2791E5 /* Pods-PrankMemo.debug.xcconfig */,
+				CEC0119FBD0015C007FE2FE5 /* Pods-PrankMemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12B72C5D2C7355AE00DCFE43 /* Build configuration list for PBXNativeTarget "PrankMemo" */;
 			buildPhases = (
+				C6806D931D24B2FA6F59BADA /* [CP] Check Pods Manifest.lock */,
 				12B72C4B2C7355AD00DCFE43 /* Sources */,
 				12B72C4C2C7355AD00DCFE43 /* Frameworks */,
 				12B72C4D2C7355AD00DCFE43 /* Resources */,
+				8DA6132D353EB0E155133A64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,12 +202,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */,
 				12B72C5A2C7355AE00DCFE43 /* Preview Assets.xcassets in Resources */,
-				12B72C572C7355AE00DCFE43 /* Assets.xcassets in Resources */,
+				12B72C572C7355AE00DCFE43 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DA6132D353EB0E155133A64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrankMemo/Pods-PrankMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrankMemo/Pods-PrankMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrankMemo/Pods-PrankMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6806D931D24B2FA6F59BADA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrankMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12B72C4B2C7355AD00DCFE43 /* Sources */ = {
@@ -266,6 +386,7 @@
 		};
 		12B72C5E2C7355AE00DCFE43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4B4DFE92CBC1E26E2791E5 /* Pods-PrankMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +416,7 @@
 		};
 		12B72C5F2C7355AE00DCFE43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEC0119FBD0015C007FE2FE5 /* Pods-PrankMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

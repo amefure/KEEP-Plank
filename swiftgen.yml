@@ -1,0 +1,18 @@
+# ローカリゼーション(多言語対応)用Stringファイル
+strings:
+  inputs:
+      - PrankMemo/Resources/Localizable.strings
+  # テンプレート指定と保存先
+  outputs:
+    - templateName: structured-swift5
+      output: PrankMemo/Generated/Strings.swift
+# 画像やカラーコードなどのAssetsリソース
+xcassets:
+  # 画像やカラーなど
+  inputs:
+    - PrankMemo/Resources/Images.xcassets
+    - PrankMemo/Resources/Colors.xcassets
+  # テンプレート指定と保存先
+  outputs:
+    - templateName: swift5
+      output: PrankMemo/Generated/Assets.swift
