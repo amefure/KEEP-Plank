@@ -12,3 +12,8 @@
 
 "dialog_button_ok" = "OK";
 "dialog_button_cancel" = "キャンセル";
+
+// MARK: - Notify
+"notify_rejection_title" = "通知が許可されていません";
+"notify_rejection_msg" = "設定アプリから通知を有効にしてください。";
+"notify_rejection_show_setting" = "設定を開く";

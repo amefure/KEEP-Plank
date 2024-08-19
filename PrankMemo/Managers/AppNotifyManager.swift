@@ -10,10 +10,6 @@ import UserNotifications
 
 class AppNotifyManager {
     
-    init() {
-        requestAuthorization()
-    }
-    
     /// 通知許可申請リクエスト
     private func requestAuthorization() {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -32,10 +28,10 @@ class AppNotifyManager {
     
     /// 通知が許可されていない場合にアラートで通知許可を促す
     private func showSettingsAlert() {
-        let alertController = UIAlertController(title: "通知が許可されていません",
-                                                message: "設定アプリから通知を有効にしてください。",
+        let alertController = UIAlertController(title: L10n.notifyRejectionTitle,
+                                                message: L10n.notifyRejectionMsg,
                                                 preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "設定を開く", style: .default) { _ in
+        let settingsAction = UIAlertAction(title: L10n.notifyRejectionShowSetting, style: .default) { _ in
             guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return }
             if UIApplication.shared.canOpenURL(settingsURL) {
                 UIApplication.shared.open(settingsURL)
@@ -51,7 +47,5 @@ class AppNotifyManager {
         let rootVC = windowScene?.windows.first?.rootViewController
         rootVC?.present(alertController, animated: true, completion: {})
     }
-
-    
 }
 

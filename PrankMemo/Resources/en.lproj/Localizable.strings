@@ -12,3 +12,8 @@
 
 "dialog_button_ok" = "OK";
 "dialog_button_cancel" = "cancel";
+
+// MARK: - Notify
+"notify_rejection_title" = "Notifications not allowed";
+"notify_rejection_msg" = "Please enable notifications in the Settings app.";
+"notify_rejection_show_setting" = "Open Settings";

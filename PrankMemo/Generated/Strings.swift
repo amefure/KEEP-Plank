@@ -21,6 +21,12 @@ internal enum L10n {
   /// 
   ///   Created by t&a on 2024/08/19.
   internal static let dialogTitle = L10n.tr("Localizable", "dialog_title", fallback: "お知らせ")
+  /// 設定アプリから通知を有効にしてください。
+  internal static let notifyRejectionMsg = L10n.tr("Localizable", "notify_rejection_msg", fallback: "設定アプリから通知を有効にしてください。")
+  /// 設定を開く
+  internal static let notifyRejectionShowSetting = L10n.tr("Localizable", "notify_rejection_show_setting", fallback: "設定を開く")
+  /// 通知が許可されていません
+  internal static let notifyRejectionTitle = L10n.tr("Localizable", "notify_rejection_title", fallback: "通知が許可されていません")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
