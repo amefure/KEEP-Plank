@@ -1,32 +1,11 @@
 //
-//  HomeCalendarView.swift
+//  CarouselCalendarView.swift
 //  PrankMemo
 //
-//  Created by t&a on 2024/08/19.
+//  Created by t&a on 2024/08/26.
 //
 
 import SwiftUI
-
-struct HomeCalendarView: View {
-    @EnvironmentObject private var rootEnvironment: RootEnvironment
-    var body: some View {
-        CarouselCalendarView(
-            yearAndMonths: rootEnvironment.currentYearAndMonth,
-            dates: rootEnvironment.currentDates) { index  in
-                if index == 1 {
-                    rootEnvironment.backMonth()
-                } else {
-                    rootEnvironment.forwardMonth()
-                }
-            }
-    }
-}
-
-#Preview {
-    HomeCalendarView()
-        .environmentObject(RootEnvironment())
-}
-
 
 struct CarouselCalendarView: View {
     
@@ -37,7 +16,7 @@ struct CarouselCalendarView: View {
     
     @GestureState private var dragOffset: CGFloat = 0
     // 初期描画のUI崩れ隠し用(1秒後に表示
-    @State private var opacity: Double = 0
+    @State private var opacity: Double = 1
     
     var body: some View {
         GeometryReader { geometry in
@@ -84,9 +63,9 @@ struct CarouselCalendarView: View {
             .clipped()
             .opacity(opacity)
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                    opacity = 1
-                }
+//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+//                    opacity = 1
+//                }
             }
     }
 }
