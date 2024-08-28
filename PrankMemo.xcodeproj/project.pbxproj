@@ -16,6 +16,8 @@
 		1217BB4A2C7DFCBE00BAD8A5 /* MyDataRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB492C7DFCBE00BAD8A5 /* MyDataRootView.swift */; };
 		1217BB4C2C7DFD9E00BAD8A5 /* MyDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */; };
 		1217BB4E2C7E07A100BAD8A5 /* ExModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */; };
+		12263C2E2C7F4BA000F7FE1F /* NotifyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */; };
+		12263C332C7F552800F7FE1F /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C322C7F552800F7FE1F /* AppManager.swift */; };
 		1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5A22C73569400BAEE37 /* Images.xcassets */; };
 		1280A5A82C73636000BAEE37 /* Prank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5A72C73636000BAEE37 /* Prank.swift */; };
 		1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */; };
@@ -61,6 +63,8 @@
 		1217BB492C7DFCBE00BAD8A5 /* MyDataRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataRootView.swift; sourceTree = "<group>"; };
 		1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataViewModel.swift; sourceTree = "<group>"; };
 		1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExModifier.swift; sourceTree = "<group>"; };
+		12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyConfig.swift; sourceTree = "<group>"; };
+		12263C322C7F552800F7FE1F /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		1280A5A22C73569400BAEE37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1280A5A72C73636000BAEE37 /* Prank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prank.swift; sourceTree = "<group>"; };
 		1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependency.swift; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				1280A5BE2C73657000BAEE37 /* RealmConfig.swift */,
+				12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 		1280A5C52C73670500BAEE37 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				12263C322C7F552800F7FE1F /* AppManager.swift */,
 				1280A5C62C73671300BAEE37 /* AppNotifyManager.swift */,
 				1280A5D52C73718D00BAEE37 /* AppTimerManager.swift */,
 			);
@@ -520,6 +526,7 @@
 				1280A5C42C73668C00BAEE37 /* RootEnvironment.swift in Sources */,
 				1217BB462C7DA72600BAD8A5 /* MyHistoryTabRootView.swift in Sources */,
 				1217BB3F2C7CC09100BAD8A5 /* CustomNotifyDialogView.swift in Sources */,
+				12263C2E2C7F4BA000F7FE1F /* NotifyConfig.swift in Sources */,
 				1280A5EF2C738B7200BAEE37 /* UserDefaultsKey.swift in Sources */,
 				1280A5E92C738A2C00BAEE37 /* SCWeek.swift in Sources */,
 				1280A5E02C73891100BAEE37 /* TabViewLayout.swift in Sources */,
@@ -547,6 +554,7 @@
 				1280A5B32C7364C200BAEE37 /* DateFormatUtility.swift in Sources */,
 				1280A5B62C7364F700BAEE37 /* ExUIApplication.swift in Sources */,
 				1217BB422C7DA60300BAD8A5 /* TimeLineView.swift in Sources */,
+				12263C332C7F552800F7FE1F /* AppManager.swift in Sources */,
 				1280A5DC2C73862E00BAEE37 /* CalendarView.swift in Sources */,
 				1280A5EC2C738AF000BAEE37 /* MyHistoryViewModel.swift in Sources */,
 				1217BB3C2C7CB05F00BAD8A5 /* YearAndMonthSelectionView.swift in Sources */,
@@ -708,8 +716,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,9 +725,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.PrankMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -741,8 +751,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -750,9 +760,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.PrankMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

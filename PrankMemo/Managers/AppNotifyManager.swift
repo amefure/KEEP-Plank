@@ -19,7 +19,7 @@ class AppNotifyManager {
     private let NOTIFY_ID = "NOTIFY_ID"
     
     /// 通知許可申請リクエスト
-    private func requestAuthorization() {
+    public func requestAuthorization() {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter
             .current()
@@ -57,45 +57,48 @@ class AppNotifyManager {
     }
 
 
-    public func sendNotificationRequest(_ userName: String, _ date: Date) {
+    public func sendNotificationRequest() {
         let content = UNMutableNotificationContent()
-        content.title = "プランクメモ"
+        content.title = NotifyConfig.INITIAL_TITLE
 
 
-        content.body = ""
+        content.body = userDefaultsRepository.getStringData(key: UserDefaultsKey.NOTICE_MSG, initialValue: NotifyConfig.INITIAL_MSG)
 
-        // Setting > TimePickerView.swift
-        //let timeStr = // userDefaultsRepository.getStringData(key: UserDefaultsKey.NOTICE_TIME, initialValue: NotifyConfig.INITIAL_TIME)
+        let timeStr = userDefaultsRepository.getStringData(key: UserDefaultsKey.NOTICE_TIME, initialValue: NotifyConfig.INITIAL_TIME)
 
-        var dateStr = ""
-
-        // dateStr = DateFormatUtility().getNotifyString(date: date)
-
-        // "yyyy-MM-dd"形式で取得した文字列を配列に変換
-        let dateArray = dateStr.split(separator: "-")
         // "H-m"形式で取得した文字列を配列に変換
-        //let timeArray = timeStr.split(separator: "-")
+        let timeArray = timeStr.split(separator: "-")
 
-        let month = Int(dateArray[safe: 1] ?? "1") ?? 1
-        let day = Int(dateArray[safe: 2] ?? "1") ?? 1
-        let hour = Int(timeArray[safe: 0] ?? "6") ?? 6
+        let hour = Int(timeArray[safe: 0] ?? "19") ?? 19
         let minute = Int(timeArray[safe: 1] ?? "0") ?? 0
 
-        let dateComponent = DateComponents(
-            month: month,
-            day: day,
-            hour: hour,
-            minute: minute
-        )
-
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
-        let request = UNNotificationRequest(identifier: NOTIFY_ID, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
+        // 毎週設定するために各曜日で登録する
+        Weekday.allCases.forEach { week in
+            var dateComponents = DateComponents()
+            dateComponents.hour = hour
+            dateComponents.minute = minute
+            dateComponents.weekday = week.rawValue
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            let request = UNNotificationRequest(identifier: NOTIFY_ID + String(week.rawValue), content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request)
+        }
     }
 
     public func removeNotificationRequest() {
-        let center = UNUserNotificationCenter.current()
-        center.removePendingNotificationRequests(withIdentifiers: [NOTIFY_ID])
+        Weekday.allCases.forEach { week in
+            let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: [NOTIFY_ID + String(week.rawValue)])
+        }
     }
 }
 
+
+private enum Weekday: Int, CaseIterable {
+    case sunday = 1
+    case monday = 2
+    case tuesday = 3
+    case wednesday = 4
+    case thursday = 5
+    case friday = 6
+    case saturday = 7
+}

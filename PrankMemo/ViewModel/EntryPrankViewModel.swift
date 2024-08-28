@@ -15,12 +15,11 @@ class EntryPrankViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
-    private let appTimerManager: AppTimerManager
+    private let appTimerManager = AppManager.sharedAppTimerManager
     private let realmRepository: RealmRepository
 
     init(repositoryDependency: RepositoryDependency = RepositoryDependency()) {
         realmRepository = repositoryDependency.realmRepository
-        appTimerManager = repositoryDependency.appTimerManager
     }
     
     public func onAppear() {

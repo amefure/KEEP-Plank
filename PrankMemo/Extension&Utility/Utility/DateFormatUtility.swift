@@ -46,6 +46,11 @@ extension DateFormatUtility {
         c.dateComponents(components, from: date)
     }
     
+    /// `DateComponents`型を受け取り`Date`型を返す
+    public func convertComponentsDate(datDateComponentse: DateComponents) -> Date {
+        c.date(from: datDateComponentse) ?? Date()
+    }
+    
     /// `Date`型を受け取りその日の00:00:00の`Date`型を返す
     public func startOfDay(_ date: Date) -> Date {
         return c.startOfDay(for: date)

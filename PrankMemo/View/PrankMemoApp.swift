@@ -20,17 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         // Firebase
         FirebaseApp.configure()
-
+        // UNUserNotificationCenterDelegateの適応
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
 
+    
     // フォアグラウンドでも通知を有効にする
     func userNotificationCenter(
-        _: UNUserNotificationCenter,
-        willPresent _: UNNotification,
-        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
-    ) {
-        completionHandler([[.banner, .list, .sound]])
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([[.banner, .list, .sound]])
     }
 }
 

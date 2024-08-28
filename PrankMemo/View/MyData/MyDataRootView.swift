@@ -9,12 +9,12 @@ import SwiftUI
 import Charts
 
 struct MyDataRootView: View {
-    @ObservedObject private var rootEnvironment = RootEnvironment.shared
+    @EnvironmentObject private var rootEnvironment: RootEnvironment
     @ObservedObject private var viewModel = MyDataViewModel()
     private let df = DateFormatUtility(format: "M月")
     
     var body: some View {
-        VStack {
+        ScrollView {
 
             HStack {
                 Text("月別合計回数")
@@ -108,10 +108,50 @@ struct MyDataRootView: View {
                 .fontWeight(.bold)
                 .foregroundStyle(.themaBlack)
             
+            
+            HStack {
+                Text("通知設定")
+                    .font(.system(size: 14))
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Toggle(isOn: $viewModel.notifyFlag) {
+                    Text("通知切り替えスイッチ")
+                }.labelsHidden()
+                    .tint(.themaBlack)
+                
+            }.padding()
+            
+            VStack {
+                
+                HStack {
+                    Spacer()
+                    
+                    DatePicker(
+                        selection: $viewModel.time,
+                        displayedComponents: DatePickerComponents.hourAndMinute,
+                        label: {
+                            Text("通知時間")
+                                .foregroundColor(.exText)
+                        }
+                    ).environment(\.locale, Locale(identifier: "ja_JP"))
+                        .colorMultiply(.exText)
+                }
+               
+                Text("※ 毎日プランクを行いたい時間にリマインド通知を設定できます。")
+                    .font(.system(size: 14))
+                    .fontWeight(.bold)
+            }.roundedRectangleShadowBackView(height: 120)
+                .fontWeight(.bold)
+                .foregroundStyle(.themaBlack)
+            
             Spacer()
         }.foregroundStyle(.exText)
             .onAppear {
                 viewModel.onAppear()
+            }.onDisappear {
+                viewModel.onDisappear()
             }
     }
 }

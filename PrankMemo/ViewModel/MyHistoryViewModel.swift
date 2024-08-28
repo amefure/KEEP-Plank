@@ -65,6 +65,10 @@ class MyHistoryViewModel: ObservableObject {
     public func onAppear() {
         readAllPranks()
     }
+    
+    public func onDisappear() {
+        cancellables.removeAll()
+    }
 }
 
 // MARK: - Realm

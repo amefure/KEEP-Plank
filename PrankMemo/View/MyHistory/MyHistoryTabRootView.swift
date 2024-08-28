@@ -62,6 +62,7 @@ struct MyHistoryTabRootView: View {
                     .environmentObject(rootEnvironment)
             }
         }.onAppear { viewModel.onAppear() }
+            .onDisappear { viewModel.onDisappear() }
     }
 }
 
