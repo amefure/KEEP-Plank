@@ -24,19 +24,17 @@ struct TabViewLayout<Content: View>: View {
             
             Spacer()
             
-            Rectangle()
-                .frame(height: 1)
-                .tint(.brown)
-                .padding(.bottom, 30)
-            
             HStack {
                 Spacer()
                 
                 Button {
                     selectTab = 0
                 } label: {
-                    Image(systemName: "house.fill")
-                }.foregroundStyle(.black)
+                    Image(systemName: "calendar.badge.clock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                }.foregroundStyle(.white)
                 
                 Spacer()
                 
@@ -44,18 +42,27 @@ struct TabViewLayout<Content: View>: View {
                     selectTab = 1
                 } label: {
                     Image(systemName: "house.fill")
-                }.foregroundStyle(.black)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                }.foregroundStyle(.white)
                 
                 Spacer()
                 
                 Button {
                     selectTab = 2
                 } label: {
-                    Image(systemName: "house.fill")
-                }.foregroundStyle(.black)
+                    Image(systemName: "chart.bar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                }.foregroundStyle(.white)
                 
                 Spacer()
-            }
+            }.frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)
+                .background(Asset.Colors.themaBlack.swiftUIColor)
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/))
+                .padding(.bottom, 5)
         }
     }
 }

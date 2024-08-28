@@ -9,6 +9,9 @@ import RealmSwift
 
 class Prank: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var seconds: Int = 0
+    /// msだが単位は100ms
+    /// 315 なら 3150ms になる
+    @Persisted var miliseconds: Int = 0
+    /// 作成日
     @Persisted var createdAt = Date()
 }

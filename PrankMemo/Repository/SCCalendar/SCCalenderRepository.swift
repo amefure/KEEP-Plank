@@ -1,8 +1,8 @@
 //
 //  SCCalenderViewModel.swift
-//  UNCHILOG
+//  PrankMemo
 //
-//  Created by t&a on 2024/03/25.
+//  Created by t&a on 2024/08/19.
 //
 
 import SwiftUI
@@ -71,7 +71,7 @@ extension SCCalenderRepository {
         let yearAndMonths = _currentYearAndMonth.value
         
         let df = DateFormatUtility()
-        let poopRepository = PoopRepository()
+        let realmRepository = RealmRepository()
         
         var datesList: [[SCDate]] = []
         for yearAndMonth in yearAndMonths {
@@ -112,7 +112,7 @@ extension SCCalenderRepository {
                 let isToday = df.checkInSameDayAs(date: date, sameDay: Date())
                 let holidayName = "" // ここに祝日名を取得する処理を追加する
                 // 表示するカウントを取得
-                let count = poopRepository.getTheDateCount(date: date)
+                let count = realmRepository.getTheDateCount(date: date)
                 let scDate = SCDate(year: year, month: month, day: day, date: date, week: week, holidayName: holidayName, count: count, isToday: isToday)
                 dates.append(scDate)
             }

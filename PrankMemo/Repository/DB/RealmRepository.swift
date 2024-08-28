@@ -18,6 +18,19 @@ class RealmRepository {
 
     private let realm: Realm
 
+    public func getTheDateCount(date: Date) -> Int {
+        let df = DateFormatUtility()
+        // 指定した日付
+        let specifiedDate = df.startOfDay(date)
+        let nextDay =  df.dateByAdding(specifiedDate, by: .day, value: 1)
+
+        let predicate = NSPredicate(format: "createdAt >= %@ AND createdAt < %@", specifiedDate as NSDate, nextDay as NSDate)
+        
+        let results = realm.objects(Prank.self).filter(predicate)
+
+        // リストのカウントを返す
+        return results.count
+    }
 
     /// Create
     public func createPrank(Prank: Prank) {

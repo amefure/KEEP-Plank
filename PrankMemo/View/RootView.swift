@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RootView: View {
     
+    @ObservedObject private var rootEnvironment = RootEnvironment.shared
     @State private var selectTab = 0
    
     var body: some View {
@@ -17,13 +18,15 @@ struct RootView: View {
             TabViewLayout(selectTab: $selectTab) {
                 switch selectTab {
                 case 0:
-                    HomeView()
+                    MyHistoryTabRootView()
+                        .environmentObject(rootEnvironment)
                 case 1:
                     EntryPrankView()
+                        .environmentObject(rootEnvironment)
                 default:
-                    EntryPrankView()
+                    MyDataRootView()
+                        .environmentObject(rootEnvironment)
                 }
-               
             }
         }
     }

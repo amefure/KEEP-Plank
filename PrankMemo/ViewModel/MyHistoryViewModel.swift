@@ -1,5 +1,5 @@
 //
-//  CalendarViewModel.swift
+//  MyHistoryViewModel.swift
 //  PrankMemo
 //
 //  Created by t&a on 2024/08/19.
@@ -22,7 +22,7 @@ class MyHistoryViewModel: ObservableObject {
     
 
     // MARK: Dialog
-    @Published var showOutOfRangeCalendarDialog: Bool = false
+    @Published var showOutOfRangeCalendarDialog = false
 
    
     private let realmRepository: RealmRepository
@@ -63,14 +63,32 @@ class MyHistoryViewModel: ObservableObject {
     }
     
     public func onAppear() {
-        pranks = Array(realmRepository.readAllPranks().sorted(by: { $0.createdAt < $1.createdAt }))
+        readAllPranks()
+    }
+}
+
+// MARK: - Realm
+extension MyHistoryViewModel {
+    
+    /// 全プランク情報を取得
+    private func readAllPranks() {
+        guard let yearAndMonth = currentYearAndMonth[safe: 1] else { return }
+        pranks = Array(realmRepository.readAllPranks()
+            .filter {
+                self.dateFormatUtility.inMonth(date: $0.createdAt, year: yearAndMonth.year, month: yearAndMonth.month)
+           }
+            .sorted(by: { $0.createdAt > $1.createdAt }))
+    }
+    
+    public func getSumTime() -> Int {
+        pranks.map { $0.miliseconds }.reduce(0, +)
     }
 }
 
 // MARK: - SCCalender
 extension MyHistoryViewModel {
     
-    /// 年月を1つ進める
+    /// 年月を取得
     public func getCurrentYearAndMonth() -> String {
         return currentYearAndMonth[safe: 1]?.yearAndMonth ?? ""
     }
@@ -79,12 +97,14 @@ extension MyHistoryViewModel {
     public func forwardMonth() {
         let result = scCalenderRepository.forwardMonth()
         showOutOfRangeCalendarDialog = !result
+        readAllPranks()
     }
 
     /// 年月を1つ戻す
     public func backMonth() {
         let result = scCalenderRepository.backMonth()
         showOutOfRangeCalendarDialog = !result
+        readAllPranks()
     }
     
     /// 週始まりを設定

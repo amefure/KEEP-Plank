@@ -19,7 +19,8 @@ class AppTimerManager {
     
     
     public func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] _ in
+        // 0.01秒ごとに1(100ms)を追加する
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] _ in
             guard let self else { return }
             let time = _time.value + 1
             _time.send(time)

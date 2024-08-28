@@ -59,7 +59,8 @@ struct CarouselCalendarView: View {
                         parentFunction(newIndex)
                     }
             )
-        }.animation(.interpolatingSpring(mass: 0.6, stiffness: 150, damping: 80, initialVelocity: 0.1))
+        }.frame(height: 410)
+        .animation(.interpolatingSpring(mass: 0.6, stiffness: 150, damping: 80, initialVelocity: 0.1))
             .clipped()
             .opacity(opacity)
             .onAppear {

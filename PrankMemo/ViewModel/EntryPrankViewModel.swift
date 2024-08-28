@@ -16,16 +16,23 @@ class EntryPrankViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     private let appTimerManager: AppTimerManager
+    private let realmRepository: RealmRepository
 
     init(repositoryDependency: RepositoryDependency = RepositoryDependency()) {
+        realmRepository = repositoryDependency.realmRepository
         appTimerManager = repositoryDependency.appTimerManager
     }
     
     public func onAppear() {
-        appTimerManager.time.sink { time in
+        appTimerManager.time.sink { [weak self] time in
+            guard let self else { return }
             self.time = time
         }.store(in: &cancellables)
     }
+}
+
+// MARK: Timer
+extension EntryPrankViewModel {
     
     public func startTimer() {
         appTimerManager.startTimer()
@@ -38,12 +45,16 @@ class EntryPrankViewModel: ObservableObject {
     public func resetTimer() {
         appTimerManager.resetTimer()
     }
-    
-    /// `XX分XX秒`形式の文字列で取得
-    public func getTimeString() -> String {
-        let minutes = Int(time / 60)
-        let second = Int(time) % 60
-        // let milliSecond = Int(time * 100) % 100
-        return String(format: "%02d分%02d秒", minutes, second)
+
+}
+
+
+// MARK: Prank
+extension EntryPrankViewModel {
+    public func createPrank() {
+        let prank = Prank()
+        prank.createdAt = Date()
+        prank.miliseconds = time
+        realmRepository.createPrank(Prank: prank)
     }
 }

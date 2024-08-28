@@ -1,8 +1,8 @@
 //
 //  SCYearAndMonth.swift
-//  UNCHILOG
+//  PrankMemo
 //
-//  Created by t&a on 2024/03/25.
+//  Created by t&a on 2024/08/19.
 //
 
 import UIKit

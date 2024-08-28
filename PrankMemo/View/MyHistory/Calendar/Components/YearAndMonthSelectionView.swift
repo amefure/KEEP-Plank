@@ -11,7 +11,7 @@ struct YearAndMonthSelectionView: View {
     
     public var showBackButton = false
     
-    @EnvironmentObject private var viewModel: HomeCalendarViewModel
+    @EnvironmentObject private var viewModel: MyHistoryViewModel
     
     @State private var showChart = false
     @State private var showSetting = false
@@ -73,5 +73,5 @@ struct YearAndMonthSelectionView: View {
 
 #Preview {
     YearAndMonthSelectionView()
-        .environmentObject(HomeCalendarViewModel())
+        .environmentObject(MyHistoryViewModel())
 }

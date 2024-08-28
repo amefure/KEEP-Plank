@@ -13,6 +13,7 @@ class RepositoryDependency {
     /// `Repository`
     public let realmRepository: RealmRepository
     public let userDefaultsRepository: UserDefaultsRepository
+    public let scCalenderRepository: SCCalenderRepository
     
     /// `Manager`
     public let appNotifyManager: AppNotifyManager
@@ -22,6 +23,7 @@ class RepositoryDependency {
     //　シングルトンインスタンスをここで保持する
     static let sharedRealmRepository = RealmRepository()
     static let sharedUserDefaultsRepository = UserDefaultsRepository()
+    static let sharedScCalenderRepository = SCCalenderRepository()
     static let sharedAppNotifyManager = AppNotifyManager()
     static let sharedAppTimerManager = AppTimerManager()
 
@@ -30,6 +32,7 @@ class RepositoryDependency {
         userDefaultsRepository = RepositoryDependency.sharedUserDefaultsRepository
         appNotifyManager = RepositoryDependency.sharedAppNotifyManager
         appTimerManager = RepositoryDependency.sharedAppTimerManager
+        scCalenderRepository = RepositoryDependency.sharedScCalenderRepository
     }
 }
 

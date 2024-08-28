@@ -1,8 +1,8 @@
 //
 //  SCDate.swift
-//  UNCHILOG
+//  PrankMemo
 //
-//  Created by t&a on 2024/03/25.
+//  Created by t&a on 2024/08/19.
 //
 
 import SwiftUI
@@ -15,7 +15,6 @@ struct SCDate: Identifiable {
     public var date: Date?
     public var week: SCWeek?
     public var holidayName: String = ""
-    // 登録されているPoopの量
     public var count: Int = 0
     public var isToday: Bool = false
     
@@ -25,7 +24,7 @@ struct SCDate: Identifiable {
         return str
     }
     
-    public func dayColor(defaultColor: Color = .gray) -> Color {
+    public func dayColor(defaultColor: Color = .white) -> Color {
         guard let week = week else { return defaultColor }
         if !holidayName.isEmpty { return .red }
         if week == .saturday {

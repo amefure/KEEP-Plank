@@ -7,6 +7,8 @@
 
 import UIKit
 
-class UserDefaultsKey: NSObject {
 
+class UserDefaultsKey {
+    /// 週始まり
+    static let INIT_WEEK = "INIT_WEEK"
 }
