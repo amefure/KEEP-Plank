@@ -15,8 +15,6 @@ struct CarouselCalendarView: View {
     var parentFunction: (Int) -> Void
     
     @GestureState private var dragOffset: CGFloat = 0
-    // 初期描画のUI崩れ隠し用(1秒後に表示
-    @State private var opacity: Double = 1
     
     var body: some View {
         GeometryReader { geometry in
@@ -50,24 +48,21 @@ struct CarouselCalendarView: View {
                 DragGesture(minimumDistance: 0)
                     // スワイプの変化を観測しスワイプの変化分をHStackのoffsetに反映(スワイプでビューが動く部分を実装)
                     .updating(self.$dragOffset, body: { (value, state, _) in
+                        // タップだけでスワイプされないように
+                        if value.velocity.width == 0.0 { return }
                         // スワイプ変化量をdragOffsetに反映
                         state = value.translation.width
                         // スワイプが完了するとdragOffsetの値は0になる
                     })
                     .onEnded { value in
+                        // タップだけでスワイプされないように
+                        if value.velocity.width == 0.0 { return }
                         let newIndex = value.translation.width > 0 ? 1 : 0
                         parentFunction(newIndex)
                     }
             )
-        }.frame(height: 410)
-        .animation(.interpolatingSpring(mass: 0.6, stiffness: 150, damping: 80, initialVelocity: 0.1))
+        }.frame(height: 350)
             .clipped()
-            .opacity(opacity)
-            .onAppear {
-//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-//                    opacity = 1
-//                }
-            }
     }
 }
 

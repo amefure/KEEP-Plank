@@ -41,7 +41,6 @@ struct EntryPrankView: View {
                     viewModel.startTimer()
                     rootEnvironment.isCouting = true
                 } else {
-                    rootEnvironment.isCouting = false
                     showEntryPopUp = true
                     viewModel.stopTimer()
                 }
@@ -50,7 +49,7 @@ struct EntryPrankView: View {
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
-                    .frame(width: 200, height: 200)
+                    .frame(width: 180, height: 180)
                     .background(.themaRed)
                     .clipShape(RoundedRectangle(cornerRadius: 200))
                     .shadow(color: .gray,radius: 3, x: 2, y: 2)
@@ -63,15 +62,18 @@ struct EntryPrankView: View {
         }.popUp(
             isPresented: $showEntryPopUp,
             title: L10n.popupPrankEntryTitle,
+            subTitle: rootEnvironment.getTimeStringFull(viewModel.time),
             message: L10n.popupPrankEntryMsg,
             positiveButtonTitle: L10n.popupButtonOk,
             negativeButtonTitle: L10n.dialogButtonCancel,
             positiveAction: {
+                rootEnvironment.isCouting = false
                 viewModel.createPrank()
                 viewModel.resetTimer()
                 showEntrySuccessDialog = true
             },
             negativeAction: {
+                rootEnvironment.isCouting = false
                 viewModel.resetTimer()
             }
         ).dialog(

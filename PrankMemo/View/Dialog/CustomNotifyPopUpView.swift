@@ -12,6 +12,7 @@ struct CustomNotifyPopUpView: View {
     @Binding var isPresented: Bool
     
     public let title: String
+    public let subTitle: String
     public let message: String
     public let positiveButtonTitle: String
     public let negativeButtonTitle: String
@@ -35,7 +36,7 @@ struct CustomNotifyPopUpView: View {
                 VStack(spacing: 0) {
                     
                     Text(title)
-                        .frame(width: DeviceSizeUtility.deviceWidth - 80)
+                        .frame(width: DeviceSizeUtility.deviceWidth - 60)
                         .font(.system(size: 20))
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
@@ -50,6 +51,13 @@ struct CustomNotifyPopUpView: View {
                         .padding(.top, 10)
                     
                     Spacer()
+                    
+                    Text(subTitle)
+                        .font(.system(size: 20))
+                        .foregroundStyle(.themaRed)
+                        .padding(.horizontal, 20)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 10)
                     
                     Text(message)
                         .font(.system(size: 13))
@@ -105,7 +113,7 @@ struct CustomNotifyPopUpView: View {
                     Spacer()
                         .frame(height: 20)
                    
-                }.frame(width: DeviceSizeUtility.deviceWidth - 80, height: 450)
+                }.frame(width: DeviceSizeUtility.deviceWidth - 60, height: 480)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
            // 画面一杯にViewを広げる
@@ -117,17 +125,19 @@ struct CustomNotifyPopUpView: View {
 
 extension View {
     func popUp(isPresented: Binding<Bool>,
-                title: String,
-                message: String,
-                positiveButtonTitle: String = "",
-                negativeButtonTitle: String = "",
-                positiveAction: @escaping () -> Void = {},
-                negativeAction: @escaping () -> Void = {}) -> some View
+               title: String,
+               subTitle: String,
+               message: String,
+               positiveButtonTitle: String = "",
+               negativeButtonTitle: String = "",
+               positiveAction: @escaping () -> Void = {},
+               negativeAction: @escaping () -> Void = {}) -> some View
     {
         overlay(
             CustomNotifyPopUpView(
                 isPresented: isPresented,
                 title: title,
+                subTitle: subTitle,
                 message: message,
                 positiveButtonTitle: positiveButtonTitle,
                 negativeButtonTitle: negativeButtonTitle,
@@ -143,6 +153,7 @@ extension View {
     CustomNotifyPopUpView(
         isPresented: Binding.constant(true),
         title: "ポップアップタイトル",
+        subTitle: "0分3秒00",
         message: "messagemessagemessagemessagemessagemessagemessage",
         positiveButtonTitle: "OK",
         negativeButtonTitle: "NG",

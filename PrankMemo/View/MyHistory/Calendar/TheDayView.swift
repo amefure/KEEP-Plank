@@ -31,7 +31,11 @@ struct TheDayView: View {
                 return theDay.dayColor()
             }
         } else {
-            return .themaBlack
+            if theDay.week == .sunday || theDay.week == .saturday {
+                return theDay.dayColor()
+            } else {
+                return .themaBlack
+            }
         }
     }
 
@@ -49,11 +53,16 @@ struct TheDayView: View {
                         .foregroundStyle(.white)
                         .padding(.top, 3)
                 }.frame(maxWidth: .infinity)
-                    .frame(height: 70)
+                    .frame(height: 60)
                     .background(.themaBlack)
+            } else {
+                Color.white
+                    .opacity(0.0001)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 60)
             }
         }.frame(maxWidth: .infinity)
-            .frame(height: 70)
+            .frame(height: 60)
     }
 }
 

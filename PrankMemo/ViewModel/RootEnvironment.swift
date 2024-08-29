@@ -19,7 +19,7 @@ class RootEnvironment: ObservableObject {
         userDefaultsRepository = repositoryDependency.userDefaultsRepository
     }
     
-    /// `XX分XX秒XX`形式の文字列で取得
+    /// `XX分XX秒XX`形式の文字列をタプルで取得
     public func getTimeString(_ timeInMillis: Int) -> (String, String, String) {
         // ミリ秒単位から分と秒とミリ秒に変換
         // 保存しているのは100ms単位のため1000ではなく100で割る
@@ -32,5 +32,11 @@ class RootEnvironment: ObservableObject {
         let secondsStr = String(format: "%01d" + L10n.secondUnit, seconds)
         let millisecondsStr = String(format: "%02d", milliseconds)
         return (minutesStr, secondsStr, millisecondsStr)
+    }
+    
+    /// `XX分XX秒XX`形式の文字列で取得
+    public func getTimeStringFull(_ timeInMillis: Int) -> String {
+        let (minute, second , mili) = getTimeString(timeInMillis)
+        return minute + second + mili
     }
 }

@@ -14,7 +14,7 @@ struct RootView: View {
     @State private var selectTab = 0
    
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             NavigationStack {
                 TabViewLayout(selectTab: $selectTab) {
                     switch selectTab {
