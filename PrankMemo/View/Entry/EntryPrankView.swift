@@ -10,14 +10,16 @@ import Combine
 
 struct EntryPrankView: View {
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @ObservedObject private var entryPrankViewModel = EntryPrankViewModel()
-    @State private var isCouting = false
+    // 親Viewで更新が走りEntryPrankViewが再描画されるためObservedObjectだと画面が更新されない
+    @StateObject private var viewModel = EntryPrankViewModel()
+    @State private var showEntryPopUp = false
+    @State private var showEntrySuccessDialog = false
     var body: some View {
         VStack {
             
             Spacer()
-            
-            let (minute, second , mili) = rootEnvironment.getTimeString(entryPrankViewModel.time)
+
+            let (minute, second , mili) = rootEnvironment.getTimeString(viewModel.time)
             
             HStack {
                 Spacer()
@@ -35,52 +37,53 @@ struct EntryPrankView: View {
             Spacer()
             
             Button {
-                if !isCouting {
-                    isCouting = true
-                    entryPrankViewModel.startTimer()
+                if !rootEnvironment.isCouting {
+                    viewModel.startTimer()
+                    rootEnvironment.isCouting = true
                 } else {
-                    isCouting = false
-                    entryPrankViewModel.stopTimer()
-                    entryPrankViewModel.createPrank()
-                    entryPrankViewModel.resetTimer()
+                    rootEnvironment.isCouting = false
+                    showEntryPopUp = true
+                    viewModel.stopTimer()
                 }
-                
             } label: {
-                Text(isCouting ? "FINISH" : "PRANK START!")
+                Text(rootEnvironment.isCouting ? "FINISH" : "PRANK START!")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
-                    .frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)
-                    .background(.themaBlack)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-            }
-            
-            if isCouting {
-                Button {
-                    isCouting = false
-                    entryPrankViewModel.stopTimer()
-                } label: {
-                    Text("STOP")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-                        .frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)
-                        .background(.themaBlack)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                }
-            } else {
-                Spacer()
-                    .frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)
+                    .frame(width: 200, height: 200)
+                    .background(.themaRed)
+                    .clipShape(RoundedRectangle(cornerRadius: 200))
+                    .shadow(color: .gray,radius: 3, x: 2, y: 2)
             }
             
             Spacer()
             
         }.onAppear {
-            entryPrankViewModel.onAppear()
-        }
+            viewModel.onAppear()
+        }.popUp(
+            isPresented: $showEntryPopUp,
+            title: L10n.popupPrankEntryTitle,
+            message: L10n.popupPrankEntryMsg,
+            positiveButtonTitle: L10n.popupButtonOk,
+            negativeButtonTitle: L10n.dialogButtonCancel,
+            positiveAction: {
+                viewModel.createPrank()
+                viewModel.resetTimer()
+                showEntrySuccessDialog = true
+            },
+            negativeAction: {
+                viewModel.resetTimer()
+            }
+        ).dialog(
+            isPresented: $showEntrySuccessDialog,
+            title: L10n.dialogTitle,
+            message: L10n.dialogEntrySuccessMsg,
+            positiveButtonTitle: L10n.dialogButtonOk
+        )
     }
 }
 
 #Preview {
     EntryPrankView()
+        .environmentObject(RootEnvironment())
 }

@@ -13,7 +13,54 @@
 "dialog_button_ok" = "OK";
 "dialog_button_cancel" = "cancel";
 
+"dialog_entry_success_msg" = "I registered a plank record.";
+
+"popup_prank_entry_title" = "Plank Complete";
+"popup_prank_entry_msg" = "Thank you for your hard work! \nWould you like to register this plank record?";
+"popup_button_ok" = "register";
+
+// MARK: - Loacle
+"date_locale" = "en_US";
+"date_timezone" = "------";
+
+// MARK: - App
+"minute_unit" = "：";
+"second_unit" = "：";
+"day_unit" = "day";
+"month_unit" = "Month";
+
+"calender_sum_count" = "Total number of times";
+"calender_sum_count_unit" = "times/month";
+"calender_sum_time" = "Total Time";
+"calender_sum_time_unit" = "/ month";
+
+"timeline_no_data" = "No record.";
+
+"mydata_sum_count" = "Monthly total";
+"mydata_charts_x" = "Date";
+"mydata_charts_y" = "Count";
+"mydata_no_data" = "There is no data for the last 6 months.";
+"mydata_continuous_day" = "Consecutive days";
+
+"mydata_notify_setting" = "Notification settings";
+"mydata_notify_setting_switch" = "Notifications toggle switch";
+"mydata_notify_time" = "Notification Time";
+"mydata_notify_desc" = "* You can set a reminder notification for the time you want to do plank every day.";
+
+
 // MARK: - Notify
 "notify_rejection_title" = "Notifications not allowed";
 "notify_rejection_msg" = "Please enable notifications in the Settings app.";
 "notify_rejection_show_setting" = "Open Settings";
+"notify_default_title" = "KEEP PRANK";
+"notify_default_msg" = "Time to do a plank! Good luck!";
+
+// MARK: - Setting
+"setting_title" = "Setting";
+"setting_section_link_title" = "Link";
+"setting_section_link_review" = "Review the app";
+"setting_section_link_recommend" = "Recommend 「KEEP PRANK」";
+"setting_section_link_share_text" = "--♫";
+"setting_section_link_contact" = "Here's the problem with the app";
+"setting_section_link_terms" = "Terms of Use and Privacy Policy";
+"setting_section_link_desc" = "・If you have any problems with the app, please contact us via 「App problems here.」";

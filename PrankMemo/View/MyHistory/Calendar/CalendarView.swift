@@ -38,7 +38,7 @@ struct CalendarView: View {
             
             HStack {
                 
-                Text("合計回数")
+                Text(L10n.calenderSumCount)
                     .font(.system(size: 14))
                 
                 Spacer()
@@ -47,7 +47,7 @@ struct CalendarView: View {
                     .font(.system(size: 30))
                     .foregroundStyle(.red)
                 
-                Text("回 / 月")
+                Text(L10n.calenderSumCountUnit)
                     .font(.system(size: 14))
                     .offset(y: 5)
                     .padding(.trailing)
@@ -57,11 +57,10 @@ struct CalendarView: View {
             
             HStack {
                 
-                Text("合計時間")
+                Text(L10n.calenderSumTime)
                     .font(.system(size: 14))
                 
                 Spacer()
-                
                 
                 let (minute, second , mili) = rootEnvironment.getTimeString(viewModel.getSumTime())
                 
@@ -77,7 +76,7 @@ struct CalendarView: View {
                 }.font(.system(size: 20))
                     .foregroundStyle(.red)
                 
-                Text(" / 月")
+                Text(L10n.calenderSumTimeUnit)
                     .font(.system(size: 14))
                     .offset(y: 5)
                     .padding(.trailing)

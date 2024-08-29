@@ -109,13 +109,15 @@ extension MyDataViewModel {
     
     
     /// MoneyRecordを月毎にセクション分けした辞書型に変換する
-    public func dayMoneyRecordDictionary() -> [Date: [Prank]] {
+    public func dayMoneyRecordDictionary() -> [Date: [Prank]]? {
         let today = Date()
         var groupedRecords = Dictionary(grouping: pranks) { [weak self] prank in
             guard let self else { return today }
             return dateFormatUtility.startOfMonth(prank.createdAt)
         }
-        
+        if (groupedRecords.isEmpty) {
+            return nil
+        }
         // 今月のDate型を取得
         let currentMonth = dateFormatUtility.startOfMonth(today)
         

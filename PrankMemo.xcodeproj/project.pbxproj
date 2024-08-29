@@ -18,6 +18,10 @@
 		1217BB4E2C7E07A100BAD8A5 /* ExModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */; };
 		12263C2E2C7F4BA000F7FE1F /* NotifyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */; };
 		12263C332C7F552800F7FE1F /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C322C7F552800F7FE1F /* AppManager.swift */; };
+		12263C352C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */; };
+		12263C382C805A2300F7FE1F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C372C805A2300F7FE1F /* SettingView.swift */; };
+		12263C3A2C807D5700F7FE1F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C392C807D5700F7FE1F /* SettingViewModel.swift */; };
+		12263C3C2C807DBD00F7FE1F /* StaticUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */; };
 		1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5A22C73569400BAEE37 /* Images.xcassets */; };
 		1280A5A82C73636000BAEE37 /* Prank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5A72C73636000BAEE37 /* Prank.swift */; };
 		1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */; };
@@ -65,6 +69,10 @@
 		1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExModifier.swift; sourceTree = "<group>"; };
 		12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyConfig.swift; sourceTree = "<group>"; };
 		12263C322C7F552800F7FE1F /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotifyPopUpView.swift; sourceTree = "<group>"; };
+		12263C372C805A2300F7FE1F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		12263C392C807D5700F7FE1F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticUrls.swift; sourceTree = "<group>"; };
 		1280A5A22C73569400BAEE37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1280A5A72C73636000BAEE37 /* Prank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prank.swift; sourceTree = "<group>"; };
 		1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependency.swift; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				1217BB3D2C7CC09100BAD8A5 /* CustomNotifyDialogView.swift */,
+				12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -170,6 +179,14 @@
 			path = Entry;
 			sourceTree = "<group>";
 		};
+		12263C362C805A0700F7FE1F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				12263C372C805A2300F7FE1F /* SettingView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		1280A59F2C73567000BAEE37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +214,7 @@
 				1217BB402C7DA5F000BAD8A5 /* MyHistory */,
 				1217BB482C7DFC5200BAD8A5 /* Entry */,
 				1217BB472C7DFC4500BAD8A5 /* MyData */,
+				12263C362C805A0700F7FE1F /* Setting */,
 				1217BB3E2C7CC09100BAD8A5 /* Dialog */,
 				1280A5DD2C7388F900BAEE37 /* Components */,
 			);
@@ -217,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				1280A5A72C73636000BAEE37 /* Prank.swift */,
+				12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */,
 				1280A5ED2C738B6800BAEE37 /* Key */,
 				1280A5E72C738A2C00BAEE37 /* SCCalendar */,
 				1280A5BF2C73657000BAEE37 /* Config */,
@@ -230,6 +249,7 @@
 				1280A5C32C73668C00BAEE37 /* RootEnvironment.swift */,
 				1280A5EB2C738AF000BAEE37 /* MyHistoryViewModel.swift */,
 				1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */,
+				12263C392C807D5700F7FE1F /* SettingViewModel.swift */,
 				1280A5D92C73766600BAEE37 /* EntryPrankViewModel.swift */,
 			);
 			path = ViewModel;
@@ -531,6 +551,7 @@
 				1280A5E92C738A2C00BAEE37 /* SCWeek.swift in Sources */,
 				1280A5E02C73891100BAEE37 /* TabViewLayout.swift in Sources */,
 				12B72C552C7355AD00DCFE43 /* RootView.swift in Sources */,
+				12263C352C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift in Sources */,
 				1280A5D82C73765900BAEE37 /* EntryPrankView.swift in Sources */,
 				1217BB4E2C7E07A100BAD8A5 /* ExModifier.swift in Sources */,
 				1280A5DA2C73766600BAEE37 /* EntryPrankViewModel.swift in Sources */,
@@ -542,6 +563,7 @@
 				1280A5B82C73651300BAEE37 /* ExCollection.swift in Sources */,
 				1280A5CF2C73684400BAEE37 /* Strings.swift in Sources */,
 				1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */,
+				12263C382C805A2300F7FE1F /* SettingView.swift in Sources */,
 				1280A5E32C738A1300BAEE37 /* SCCalenderRepository.swift in Sources */,
 				1280A5CE2C73684400BAEE37 /* Assets.swift in Sources */,
 				1217BB4C2C7DFD9E00BAD8A5 /* MyDataViewModel.swift in Sources */,
@@ -549,12 +571,14 @@
 				1280A5E82C738A2C00BAEE37 /* SCDate.swift in Sources */,
 				1280A5A82C73636000BAEE37 /* Prank.swift in Sources */,
 				1280A5AD2C73644000BAEE37 /* UserDefaultsRepository.swift in Sources */,
+				12263C3C2C807DBD00F7FE1F /* StaticUrls.swift in Sources */,
 				1280A5D62C73718D00BAEE37 /* AppTimerManager.swift in Sources */,
 				1217BB372C7C9FAB00BAD8A5 /* CarouselCalendarView.swift in Sources */,
 				1280A5B32C7364C200BAEE37 /* DateFormatUtility.swift in Sources */,
 				1280A5B62C7364F700BAEE37 /* ExUIApplication.swift in Sources */,
 				1217BB422C7DA60300BAD8A5 /* TimeLineView.swift in Sources */,
 				12263C332C7F552800F7FE1F /* AppManager.swift in Sources */,
+				12263C3A2C807D5700F7FE1F /* SettingViewModel.swift in Sources */,
 				1280A5DC2C73862E00BAEE37 /* CalendarView.swift in Sources */,
 				1280A5EC2C738AF000BAEE37 /* MyHistoryViewModel.swift in Sources */,
 				1217BB3C2C7CB05F00BAD8A5 /* YearAndMonthSelectionView.swift in Sources */,
@@ -712,7 +736,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrankMemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "プランクメモ";
+				INFOPLIST_KEY_CFBundleDisplayName = "KEEP PRANK";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -747,7 +771,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrankMemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "プランクメモ";
+				INFOPLIST_KEY_CFBundleDisplayName = "KEEP PRANK";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

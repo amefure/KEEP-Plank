@@ -14,8 +14,10 @@ class DateFormatUtility {
     
     init(format: String = "yyyy-MM-dd") {
         df.dateFormat = format
-        df.locale = Locale(identifier: "ja_JP")
-        c.timeZone = TimeZone(identifier: "Asia/Tokyo")!
+        df.locale = Locale(identifier: L10n.dateLocale)
+        if Locale.current.identifier.hasPrefix(Locale(identifier: L10n.dateLocale).identifier) {
+            c.timeZone = TimeZone(identifier: L10n.dateTimezone)!
+        }
         df.calendar = c
     }
 }

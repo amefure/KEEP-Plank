@@ -10,6 +10,8 @@ import UIKit
 /// アプリ内で共通で利用される状態や環境値を保持する
 class RootEnvironment: ObservableObject {
     static let shared = RootEnvironment()
+    
+    @Published var isCouting = false
 
     private let userDefaultsRepository: UserDefaultsRepository
 
@@ -26,8 +28,8 @@ class RootEnvironment: ObservableObject {
         let seconds = totalSeconds % 60
         let milliseconds = timeInMillis % 100
         
-        let minutesStr = String(format: "%01d分", minutes)
-        let secondsStr = String(format: "%01d秒", seconds)
+        let minutesStr = String(format: "%01d" + L10n.minuteUnit, minutes)
+        let secondsStr = String(format: "%01d" + L10n.secondUnit, seconds)
         let millisecondsStr = String(format: "%02d", milliseconds)
         return (minutesStr, secondsStr, millisecondsStr)
     }

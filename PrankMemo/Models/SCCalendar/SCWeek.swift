@@ -43,7 +43,7 @@ enum SCWeek: Int, CaseIterable {
     
     public var color: Color {
         switch self {
-        case .sunday: return .red
+        case .sunday: return .themaRed
         case .saturday: return .blue
         default: return Asset.Colors.themaBlack.swiftUIColor
         }

@@ -14,12 +14,24 @@ struct TheDayView: View {
     private func calcBackColor() -> Color {
         if theDay.count == 0 {
             if theDay.isToday {
-                return .red
+                return .themaRed
             } else {
                 return .clear
             }
         } else {
-            return .yellow
+            return .themaYellow
+        }
+    }
+    
+    private func calcTextColor() -> Color {
+        if theDay.count == 0 {
+            if theDay.isToday {
+                return .white
+            } else {
+                return theDay.dayColor()
+            }
+        } else {
+            return .themaBlack
         }
     }
 
@@ -33,7 +45,7 @@ struct TheDayView: View {
                         .background(calcBackColor())
                         .font(.system(size: DeviceSizeUtility.isSESize ? 14 : 18))
                         .clipShape(RoundedRectangle(cornerRadius: 40))
-                        .foregroundStyle(theDay.isToday ? Color.white : theDay.dayColor())
+                        .foregroundStyle(calcTextColor())
                         .foregroundStyle(.white)
                         .padding(.top, 3)
                 }.frame(maxWidth: .infinity)

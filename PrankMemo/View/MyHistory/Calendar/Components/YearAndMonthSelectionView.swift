@@ -33,7 +33,7 @@ struct YearAndMonthSelectionView: View {
                     .padding(8)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
-                    .background(Asset.Colors.themaBlack.swiftUIColor)
+                    .background(.themaBlack)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             
@@ -55,7 +55,7 @@ struct YearAndMonthSelectionView: View {
                     .padding(8)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
-                    .background(Asset.Colors.themaBlack.swiftUIColor)
+                    .background(.themaBlack)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             
@@ -67,7 +67,7 @@ struct YearAndMonthSelectionView: View {
                     .scaledToFit()
                     .frame(width: 30)
             }.padding(.horizontal, 10)
-        }.foregroundStyle(Asset.Colors.themaBlack.swiftUIColor)
+        }.foregroundStyle(.themaBlack)
     }
 }
 

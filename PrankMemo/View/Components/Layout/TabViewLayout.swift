@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct TabViewLayout<Content: View>: View {
+    
+    @EnvironmentObject private var rootEnvironment: RootEnvironment
+    
     var content: Content
     
     @Binding private var selectTab: Int
     
-    init(selectTab: Binding<Int>,@ViewBuilder  content: () -> Content) {
+    init(selectTab: Binding<Int>, @ViewBuilder content: () -> Content) {
         self._selectTab = selectTab
         self.content = content()
     }
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             Spacer()
             
             content
@@ -28,13 +31,16 @@ struct TabViewLayout<Content: View>: View {
                 Spacer()
                 
                 Button {
-                    selectTab = 0
+                    // タイム計測中はタブ遷移を無効に
+                    if !rootEnvironment.isCouting {
+                        selectTab = 0
+                    }
                 } label: {
                     Image(systemName: "calendar.badge.clock")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
-                }.foregroundStyle(.white)
+                }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
                 
                 Spacer()
                 
@@ -50,13 +56,16 @@ struct TabViewLayout<Content: View>: View {
                 Spacer()
                 
                 Button {
-                    selectTab = 2
+                    // タイム計測中はタブ遷移を無効に
+                    if !rootEnvironment.isCouting {
+                        selectTab = 2
+                    }
                 } label: {
                     Image(systemName: "chart.bar")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
-                }.foregroundStyle(.white)
+                }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
                 
                 Spacer()
             }.frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)

@@ -11,7 +11,7 @@ struct TimeLineView: View {
     
     @EnvironmentObject private var rootEnvironment: RootEnvironment
     @EnvironmentObject private var viewModel: MyHistoryViewModel
-    private let dateFormatUtility = DateFormatUtility(format: "d日")
+    private let dateFormatUtility = DateFormatUtility(format: "d" + L10n.dayUnit)
     
     var body: some View {
         if viewModel.pranks.isEmpty {
@@ -22,7 +22,8 @@ struct TimeLineView: View {
                 .resizable()
                 .frame(width: 300, height: 300)
             
-            Text("記録がありません。")
+            Text(L10n.timelineNoData)
+                .foregroundStyle(.exText)
                 .fontWeight(.bold)
             
             Spacer()

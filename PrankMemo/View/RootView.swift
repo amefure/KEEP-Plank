@@ -15,18 +15,20 @@ struct RootView: View {
    
     var body: some View {
         VStack {
-            TabViewLayout(selectTab: $selectTab) {
-                switch selectTab {
-                case 0:
-                    MyHistoryTabRootView()
-                        .environmentObject(rootEnvironment)
-                case 1:
-                    EntryPrankView()
-                        .environmentObject(rootEnvironment)
-                default:
-                    MyDataRootView()
-                        .environmentObject(rootEnvironment)
-                }
+            NavigationStack {
+                TabViewLayout(selectTab: $selectTab) {
+                    switch selectTab {
+                    case 0:
+                        MyHistoryTabRootView()
+                            .environmentObject(rootEnvironment)
+                    case 1:
+                        EntryPrankView()
+                            .environmentObject(rootEnvironment)
+                    default:
+                        MyDataRootView()
+                            .environmentObject(rootEnvironment)
+                    }
+                }.environmentObject(rootEnvironment)
             }
         }
     }

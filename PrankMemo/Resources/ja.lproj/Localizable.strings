@@ -13,7 +13,56 @@
 "dialog_button_ok" = "OK";
 "dialog_button_cancel" = "キャンセル";
 
+"dialog_entry_success_msg" = "プランク記録を登録しました。";
+
+"popup_prank_entry_title" = "プランク完了";
+"popup_prank_entry_msg" = "お疲れ様でした！\n今回のプランクの記録を登録しますか？";
+"popup_button_ok" = "登録する";
+
+// MARK: - Loacle
+"date_locale" = "ja_JP";
+"date_timezone" = "Asia/Tokyo";
+
+// MARK: - App
+"minute_unit" = "分";
+"second_unit" = "秒";
+"day_unit" = "日";
+"month_unit" = "月";
+
+"calender_sum_count" = "合計回数";
+"calender_sum_count_unit" = "回 / 月";
+"calender_sum_time" = "合計時間";
+"calender_sum_time_unit" = "/ 月";
+
+"timeline_no_data" = "記録がありません。";
+
+"mydata_sum_count" = "月別合計回数";
+"mydata_charts_x" = "年月";
+"mydata_charts_y" = "回数";
+"mydata_no_data" = "直近6ヶ月のデータがありません。";
+"mydata_continuous_day" = "連続日数";
+
+"mydata_notify_setting" = "通知設定";
+"mydata_notify_setting_switch" = "通知切り替えスイッチ";
+"mydata_notify_time" = "通知時間";
+"mydata_notify_desc" = "※ 毎日プランクを行いたい時間にリマインド通知を設定できます。";
+
+
+
+
 // MARK: - Notify
 "notify_rejection_title" = "通知が許可されていません";
 "notify_rejection_msg" = "設定アプリから通知を有効にしてください。";
 "notify_rejection_show_setting" = "設定を開く";
+"notify_default_title" = "プランクメモ";
+"notify_default_msg" = "プランクをする時間だよ！頑張って！";
+
+// MARK: - Setting
+"setting_title" = "設定";
+"setting_section_link_title" = "Link";
+"setting_section_link_review" = "アプリをレビューする";
+"setting_section_link_recommend" = "「プランクメモ」をオススメする";
+"setting_section_link_share_text" = "--♫";
+"setting_section_link_contact" = "アプリの不具合はこちら";
+"setting_section_link_terms" = "利用規約とプライバシーポリシー";
+"setting_section_link_desc" = "・アプリに不具合がございましたら「アプリの不具合はこちら」よりお問い合わせください。";

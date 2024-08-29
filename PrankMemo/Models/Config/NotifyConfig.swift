@@ -8,8 +8,8 @@
 import UIKit
 
 class NotifyConfig {
-    static let INITIAL_TITLE = "プランクメモ"
+    static let INITIAL_TITLE = L10n.notifyDefaultTitle
     static let INITIAL_TIME = "19-0"
-    static let INITIAL_MSG = "プランクをする時間だよ！頑張って！"
+    static let INITIAL_MSG = L10n.notifyDefaultMsg
 }
 
