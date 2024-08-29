@@ -17,6 +17,9 @@ struct EntryPrankView: View {
     var body: some View {
         VStack {
             
+            AdMobBannerView()
+                .frame(height: 60)
+            
             Spacer()
 
             let (minute, second , mili) = rootEnvironment.getTimeString(viewModel.time)

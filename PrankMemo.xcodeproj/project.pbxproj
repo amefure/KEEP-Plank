@@ -22,6 +22,7 @@
 		12263C382C805A2300F7FE1F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C372C805A2300F7FE1F /* SettingView.swift */; };
 		12263C3A2C807D5700F7FE1F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C392C807D5700F7FE1F /* SettingViewModel.swift */; };
 		12263C3C2C807DBD00F7FE1F /* StaticUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */; };
+		12263C3E2C80A83E00F7FE1F /* AdMobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C3D2C80A83E00F7FE1F /* AdMobView.swift */; };
 		1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5A22C73569400BAEE37 /* Images.xcassets */; };
 		1280A5A82C73636000BAEE37 /* Prank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5A72C73636000BAEE37 /* Prank.swift */; };
 		1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */; };
@@ -73,6 +74,7 @@
 		12263C372C805A2300F7FE1F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		12263C392C807D5700F7FE1F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticUrls.swift; sourceTree = "<group>"; };
+		12263C3D2C80A83E00F7FE1F /* AdMobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdMobView.swift; sourceTree = "<group>"; };
 		1280A5A22C73569400BAEE37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1280A5A72C73636000BAEE37 /* Prank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prank.swift; sourceTree = "<group>"; };
 		1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependency.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				1280A5DE2C73890000BAEE37 /* Layout */,
+				12263C3D2C80A83E00F7FE1F /* AdMobView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				1217BB4A2C7DFCBE00BAD8A5 /* MyDataRootView.swift in Sources */,
 				1280A5C72C73671300BAEE37 /* AppNotifyManager.swift in Sources */,
 				1280A5C22C73657000BAEE37 /* RealmConfig.swift in Sources */,
+				12263C3E2C80A83E00F7FE1F /* AdMobView.swift in Sources */,
 				1280A5B82C73651300BAEE37 /* ExCollection.swift in Sources */,
 				1280A5CF2C73684400BAEE37 /* Strings.swift in Sources */,
 				1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */,
