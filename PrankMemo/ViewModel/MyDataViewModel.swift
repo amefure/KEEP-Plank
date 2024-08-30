@@ -17,7 +17,7 @@ class MyDataViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
     
-    @Published private(set) var pranks: [Prank] = []
+    @Published private(set) var pranks: [Plank] = []
     @Published var time = Date()
     @Published var notifyFlag = false
     
@@ -109,7 +109,7 @@ extension MyDataViewModel {
     
     
     /// MoneyRecordを月毎にセクション分けした辞書型に変換する
-    public func dayMoneyRecordDictionary() -> [Date: [Prank]]? {
+    public func dayMoneyRecordDictionary() -> [Date: [Plank]]? {
         let today = Date()
         var groupedRecords = Dictionary(grouping: pranks) { [weak self] prank in
             guard let self else { return today }

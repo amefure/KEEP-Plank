@@ -31,7 +31,7 @@ class MyHistoryViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
     
-    @Published private(set) var pranks: [Prank] = []
+    @Published private(set) var pranks: [Plank] = []
 
 
     init(repositoryDependency: RepositoryDependency = RepositoryDependency()) {

@@ -1,5 +1,5 @@
 //
-//  EntryPrankView.swift
+//  EntryPlankView.swift
 //  PrankMemo
 //
 //  Created by t&a on 2024/08/19.
@@ -8,10 +8,10 @@
 import SwiftUI
 import Combine
 
-struct EntryPrankView: View {
+struct EntryPlankView: View {
     @EnvironmentObject private var rootEnvironment: RootEnvironment
     // 親Viewで更新が走りEntryPrankViewが再描画されるためObservedObjectだと画面が更新されない
-    @StateObject private var viewModel = EntryPrankViewModel()
+    @StateObject private var viewModel = EntryPlankViewModel()
     @State private var showEntryPopUp = false
     @State private var showEntrySuccessDialog = false
     var body: some View {
@@ -48,7 +48,7 @@ struct EntryPrankView: View {
                     viewModel.stopTimer()
                 }
             } label: {
-                Text(rootEnvironment.isCouting ? "FINISH" : "PRANK START!")
+                Text(rootEnvironment.isCouting ? "FINISH" : "PLANK START!")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
@@ -89,6 +89,6 @@ struct EntryPrankView: View {
 }
 
 #Preview {
-    EntryPrankView()
+    EntryPlankView()
         .environmentObject(RootEnvironment())
 }

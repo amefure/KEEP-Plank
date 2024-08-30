@@ -26,32 +26,32 @@ class RealmRepository {
 
         let predicate = NSPredicate(format: "createdAt >= %@ AND createdAt < %@", specifiedDate as NSDate, nextDay as NSDate)
         
-        let results = realm.objects(Prank.self).filter(predicate)
+        let results = realm.objects(Plank.self).filter(predicate)
 
         // リストのカウントを返す
         return results.count
     }
 
     /// Create
-    public func createPrank(Prank: Prank) {
+    public func createPrank(Prank: Plank) {
         try! realm.write {
             realm.add(Prank)
         }
     }
 
     /// Read
-    public func readAllPranks() -> Results<Prank> {
+    public func readAllPranks() -> Results<Plank> {
         try! realm.write {
-            let Pranks = realm.objects(Prank.self)
+            let Pranks = realm.objects(Plank.self)
             // Deleteでクラッシュするため凍結させる
             return Pranks.freeze().sorted(byKeyPath: "id", ascending: true)
         }
     }
 
     /// Update
-    public func updatePrank(id: ObjectId, newPrank: Prank) {
+    public func updatePrank(id: ObjectId, newPrank: Plank) {
         try! realm.write {
-            guard let result = realm.objects(Prank.self).where({ $0.id == id }).first else {
+            guard let result = realm.objects(Plank.self).where({ $0.id == id }).first else {
                 return
             }
         }
@@ -60,7 +60,7 @@ class RealmRepository {
     /// Remove
     public func removePrank(removeIdArray: [ObjectId]) {
         let predicate = NSPredicate(format: "id IN %@", removeIdArray)
-        let objectsToDelete = realm.objects(Prank.self).filter(predicate)
+        let objectsToDelete = realm.objects(Plank.self).filter(predicate)
 
         try! realm.write {
             realm.delete(objectsToDelete)

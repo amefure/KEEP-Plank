@@ -24,7 +24,7 @@
 		12263C3C2C807DBD00F7FE1F /* StaticUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */; };
 		12263C3E2C80A83E00F7FE1F /* AdMobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C3D2C80A83E00F7FE1F /* AdMobView.swift */; };
 		1280A5A32C73569400BAEE37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5A22C73569400BAEE37 /* Images.xcassets */; };
-		1280A5A82C73636000BAEE37 /* Prank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5A72C73636000BAEE37 /* Prank.swift */; };
+		1280A5A82C73636000BAEE37 /* Plank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5A72C73636000BAEE37 /* Plank.swift */; };
 		1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */; };
 		1280A5AD2C73644000BAEE37 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5AC2C73644000BAEE37 /* UserDefaultsRepository.swift */; };
 		1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5B02C7364B900BAEE37 /* DeviceSizeUtility.swift */; };
@@ -41,8 +41,8 @@
 		1280A5D22C736A6F00BAEE37 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5D12C736A6E00BAEE37 /* PrivacyInfo.xcprivacy */; };
 		1280A5D42C736A7D00BAEE37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1280A5D32C736A7D00BAEE37 /* GoogleService-Info.plist */; };
 		1280A5D62C73718D00BAEE37 /* AppTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5D52C73718D00BAEE37 /* AppTimerManager.swift */; };
-		1280A5D82C73765900BAEE37 /* EntryPrankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5D72C73765900BAEE37 /* EntryPrankView.swift */; };
-		1280A5DA2C73766600BAEE37 /* EntryPrankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5D92C73766600BAEE37 /* EntryPrankViewModel.swift */; };
+		1280A5D82C73765900BAEE37 /* EntryPlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5D72C73765900BAEE37 /* EntryPlankView.swift */; };
+		1280A5DA2C73766600BAEE37 /* EntryPlankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5D92C73766600BAEE37 /* EntryPlankViewModel.swift */; };
 		1280A5DC2C73862E00BAEE37 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5DB2C73862D00BAEE37 /* CalendarView.swift */; };
 		1280A5E02C73891100BAEE37 /* TabViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5DF2C73891100BAEE37 /* TabViewLayout.swift */; };
 		1280A5E32C738A1300BAEE37 /* SCCalenderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5E12C738A1300BAEE37 /* SCCalenderRepository.swift */; };
@@ -76,7 +76,7 @@
 		12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticUrls.swift; sourceTree = "<group>"; };
 		12263C3D2C80A83E00F7FE1F /* AdMobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdMobView.swift; sourceTree = "<group>"; };
 		1280A5A22C73569400BAEE37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1280A5A72C73636000BAEE37 /* Prank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prank.swift; sourceTree = "<group>"; };
+		1280A5A72C73636000BAEE37 /* Plank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plank.swift; sourceTree = "<group>"; };
 		1280A5AA2C7363E200BAEE37 /* RepositoryDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDependency.swift; sourceTree = "<group>"; };
 		1280A5AC2C73644000BAEE37 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		1280A5B02C7364B900BAEE37 /* DeviceSizeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSizeUtility.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 		1280A5D12C736A6E00BAEE37 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1280A5D32C736A7D00BAEE37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1280A5D52C73718D00BAEE37 /* AppTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTimerManager.swift; sourceTree = "<group>"; };
-		1280A5D72C73765900BAEE37 /* EntryPrankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPrankView.swift; sourceTree = "<group>"; };
-		1280A5D92C73766600BAEE37 /* EntryPrankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPrankViewModel.swift; sourceTree = "<group>"; };
+		1280A5D72C73765900BAEE37 /* EntryPlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPlankView.swift; sourceTree = "<group>"; };
+		1280A5D92C73766600BAEE37 /* EntryPlankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPlankViewModel.swift; sourceTree = "<group>"; };
 		1280A5DB2C73862D00BAEE37 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		1280A5DF2C73891100BAEE37 /* TabViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewLayout.swift; sourceTree = "<group>"; };
 		1280A5E12C738A1300BAEE37 /* SCCalenderRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCalenderRepository.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		1217BB482C7DFC5200BAD8A5 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
-				1280A5D72C73765900BAEE37 /* EntryPrankView.swift */,
+				1280A5D72C73765900BAEE37 /* EntryPlankView.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 		1280A5A52C7356BF00BAEE37 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1280A5A72C73636000BAEE37 /* Prank.swift */,
+				1280A5A72C73636000BAEE37 /* Plank.swift */,
 				12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */,
 				1280A5ED2C738B6800BAEE37 /* Key */,
 				1280A5E72C738A2C00BAEE37 /* SCCalendar */,
@@ -252,7 +252,7 @@
 				1280A5EB2C738AF000BAEE37 /* MyHistoryViewModel.swift */,
 				1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */,
 				12263C392C807D5700F7FE1F /* SettingViewModel.swift */,
-				1280A5D92C73766600BAEE37 /* EntryPrankViewModel.swift */,
+				1280A5D92C73766600BAEE37 /* EntryPlankViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -460,6 +460,8 @@
 				TargetAttributes = {
 					12B72C4E2C7355AD00DCFE43 = {
 						CreatedOnToolsVersion = 15.4;
+						DevelopmentTeam = CGD79LB65H;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -555,9 +557,9 @@
 				1280A5E02C73891100BAEE37 /* TabViewLayout.swift in Sources */,
 				12B72C552C7355AD00DCFE43 /* RootView.swift in Sources */,
 				12263C352C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift in Sources */,
-				1280A5D82C73765900BAEE37 /* EntryPrankView.swift in Sources */,
+				1280A5D82C73765900BAEE37 /* EntryPlankView.swift in Sources */,
 				1217BB4E2C7E07A100BAD8A5 /* ExModifier.swift in Sources */,
-				1280A5DA2C73766600BAEE37 /* EntryPrankViewModel.swift in Sources */,
+				1280A5DA2C73766600BAEE37 /* EntryPlankViewModel.swift in Sources */,
 				12B72C532C7355AD00DCFE43 /* PrankMemoApp.swift in Sources */,
 				1217BB392C7C9FB000BAD8A5 /* TheDayView.swift in Sources */,
 				1217BB4A2C7DFCBE00BAD8A5 /* MyDataRootView.swift in Sources */,
@@ -573,7 +575,7 @@
 				1217BB4C2C7DFD9E00BAD8A5 /* MyDataViewModel.swift in Sources */,
 				1280A5BB2C73655200BAEE37 /* RealmRepository.swift in Sources */,
 				1280A5E82C738A2C00BAEE37 /* SCDate.swift in Sources */,
-				1280A5A82C73636000BAEE37 /* Prank.swift in Sources */,
+				1280A5A82C73636000BAEE37 /* Plank.swift in Sources */,
 				1280A5AD2C73644000BAEE37 /* UserDefaultsRepository.swift in Sources */,
 				12263C3C2C807DBD00F7FE1F /* StaticUrls.swift in Sources */,
 				1280A5D62C73718D00BAEE37 /* AppTimerManager.swift in Sources */,
@@ -733,14 +735,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"PrankMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrankMemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "KEEP PRANK";
+				INFOPLIST_KEY_CFBundleDisplayName = "KEEP PLANK";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -771,14 +773,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"PrankMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrankMemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "KEEP PRANK";
+				INFOPLIST_KEY_CFBundleDisplayName = "KEEP PLANK";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

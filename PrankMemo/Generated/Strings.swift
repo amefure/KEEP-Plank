@@ -61,8 +61,8 @@ internal enum L10n {
   internal static let mydataSumCount = L10n.tr("Localizable", "mydata_sum_count", fallback: "月別合計回数")
   /// プランクをする時間だよ！頑張って！
   internal static let notifyDefaultMsg = L10n.tr("Localizable", "notify_default_msg", fallback: "プランクをする時間だよ！頑張って！")
-  /// KEEP PRANK
-  internal static let notifyDefaultTitle = L10n.tr("Localizable", "notify_default_title", fallback: "KEEP PRANK")
+  /// KEEP PLANK
+  internal static let notifyDefaultTitle = L10n.tr("Localizable", "notify_default_title", fallback: "KEEP PLANK")
   /// 設定アプリから通知を有効にしてください。
   internal static let notifyRejectionMsg = L10n.tr("Localizable", "notify_rejection_msg", fallback: "設定アプリから通知を有効にしてください。")
   /// 設定を開く
@@ -82,8 +82,8 @@ internal enum L10n {
   internal static let settingSectionLinkContact = L10n.tr("Localizable", "setting_section_link_contact", fallback: "アプリの不具合はこちら")
   /// ・アプリに不具合がございましたら「アプリの不具合はこちら」よりお問い合わせください。
   internal static let settingSectionLinkDesc = L10n.tr("Localizable", "setting_section_link_desc", fallback: "・アプリに不具合がございましたら「アプリの不具合はこちら」よりお問い合わせください。")
-  /// 「KEEP PRANK」をオススメする
-  internal static let settingSectionLinkRecommend = L10n.tr("Localizable", "setting_section_link_recommend", fallback: "「KEEP PRANK」をオススメする")
+  /// 「KEEP PLANK」をオススメする
+  internal static let settingSectionLinkRecommend = L10n.tr("Localizable", "setting_section_link_recommend", fallback: "「KEEP PLANK」をオススメする")
   /// アプリをレビューする
   internal static let settingSectionLinkReview = L10n.tr("Localizable", "setting_section_link_review", fallback: "アプリをレビューする")
   /// 毎日プランクを続けて記録を残せるアプリだよ♫

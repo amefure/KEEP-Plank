@@ -1,5 +1,5 @@
 //
-//  EntryPrankViewModel.swift
+//  EntryPlankViewModel.swift
 //  PrankMemo
 //
 //  Created by t&a on 2024/08/19.
@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 /// プランク記録登録画面
-class EntryPrankViewModel: ObservableObject {
+class EntryPlankViewModel: ObservableObject {
 
     @Published private(set) var time: Int = 0
     
@@ -31,7 +31,7 @@ class EntryPrankViewModel: ObservableObject {
 }
 
 // MARK: Timer
-extension EntryPrankViewModel {
+extension EntryPlankViewModel {
     
     public func startTimer() {
         appTimerManager.startTimer()
@@ -49,9 +49,9 @@ extension EntryPrankViewModel {
 
 
 // MARK: Prank
-extension EntryPrankViewModel {
+extension EntryPlankViewModel {
     public func createPrank() {
-        let prank = Prank()
+        let prank = Plank()
         prank.createdAt = Date()
         prank.miliseconds = time
         realmRepository.createPrank(Prank: prank)
@@ -67,7 +67,7 @@ extension EntryPrankViewModel {
         
         var date = twoWeeksAgo
         while date <= today {
-            let prank = Prank()
+            let prank = Plank()
             prank.createdAt = date
             
             // ランダムな秒数を生成

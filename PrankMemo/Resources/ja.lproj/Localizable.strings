@@ -54,14 +54,14 @@
 "notify_rejection_title" = "通知が許可されていません";
 "notify_rejection_msg" = "設定アプリから通知を有効にしてください。";
 "notify_rejection_show_setting" = "設定を開く";
-"notify_default_title" = "KEEP PRANK";
+"notify_default_title" = "KEEP PLANK";
 "notify_default_msg" = "プランクをする時間だよ！頑張って！";
 
 // MARK: - Setting
 "setting_title" = "設定";
 "setting_section_link_title" = "Link";
 "setting_section_link_review" = "アプリをレビューする";
-"setting_section_link_recommend" = "「KEEP PRANK」をオススメする";
+"setting_section_link_recommend" = "「KEEP PLANK」をオススメする";
 "setting_section_link_share_text" = "毎日プランクを続けて記録を残せるアプリだよ♫";
 "setting_section_link_contact" = "アプリの不具合はこちら";
 "setting_section_link_terms" = "利用規約とプライバシーポリシー";

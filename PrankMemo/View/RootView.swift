@@ -22,7 +22,7 @@ struct RootView: View {
                         MyHistoryTabRootView()
                             .environmentObject(rootEnvironment)
                     case 1:
-                        EntryPrankView()
+                        EntryPlankView()
                             .environmentObject(rootEnvironment)
                     default:
                         MyDataRootView()
