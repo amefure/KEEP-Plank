@@ -11,7 +11,7 @@ import SwiftUI
 struct RootView: View {
     
     @ObservedObject private var rootEnvironment = RootEnvironment.shared
-    @State private var selectTab = 0
+    @State private var selectTab = 1
    
     var body: some View {
         VStack(spacing: 0) {
