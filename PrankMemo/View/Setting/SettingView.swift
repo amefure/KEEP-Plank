@@ -49,29 +49,29 @@ struct SettingView: View {
             
             List {
                 Section(header: Text("Link"), footer: Text(L10n.settingSectionLinkDesc)) {
-//                    if let url = URL(string: StaticUrls.APP_REVIEW_URL) {
-//                        // 1:レビューページ
-//                        Link(destination: url, label: {
-//                            HStack {
-//                                Image(systemName: "hand.thumbsup")
-//                                Text(L10n.settingSectionLinkReview)
-//                            }.foregroundStyle(.white)
-//                        }).listRowBackground(Color.themaBlack)
-//                    }
+                    if let url = URL(string: StaticUrls.APP_REVIEW_URL) {
+                        // 1:レビューページ
+                        Link(destination: url, label: {
+                            HStack {
+                                Image(systemName: "hand.thumbsup")
+                                Text(L10n.settingSectionLinkReview)
+                            }.foregroundStyle(.white)
+                        }).listRowBackground(Color.themaBlack)
+                    }
                     
-//                    // 2:シェアボタン
-//                    Button {
-//                        viewModel.shareApp(
-//                            shareText: L10n.settingSectionLinkShareText,
-//                            shareLink: StaticUrls.APP_REVIEW_URL
-//                        )
-//                    } label: {
-//                        HStack {
-//                            Image(systemName: "star.bubble")
-//                            
-//                            Text(L10n.settingSectionLinkRecommend)
-//                        }.foregroundStyle(.white)
-//                    }.listRowBackground(Color.themaBlack)
+                    // 2:シェアボタン
+                    Button {
+                        viewModel.shareApp(
+                            shareText: L10n.settingSectionLinkShareText,
+                            shareLink: StaticUrls.APP_REVIEW_URL
+                        )
+                    } label: {
+                        HStack {
+                            Image(systemName: "star.bubble")
+                            
+                            Text(L10n.settingSectionLinkRecommend)
+                        }.foregroundStyle(.white)
+                    }.listRowBackground(Color.themaBlack)
                     
                     if let url = URL(string: StaticUrls.APP_CONTACT_URL) {
                         // 3:お問い合わせフォーム

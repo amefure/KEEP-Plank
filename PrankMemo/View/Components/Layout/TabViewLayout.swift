@@ -41,6 +41,7 @@ struct TabViewLayout<Content: View>: View {
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                 }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
+                    .disabled(rootEnvironment.isCouting)
                 
                 Spacer()
                 
@@ -66,6 +67,7 @@ struct TabViewLayout<Content: View>: View {
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                 }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
+                    .disabled(rootEnvironment.isCouting)
                 
                 Spacer()
             }.frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)

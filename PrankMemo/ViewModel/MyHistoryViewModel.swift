@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import RealmSwift
 
 class MyHistoryViewModel: ObservableObject {
     
@@ -82,6 +83,12 @@ extension MyHistoryViewModel {
                 self.dateFormatUtility.inMonth(date: $0.createdAt, year: yearAndMonth.year, month: yearAndMonth.month)
            }
             .sorted(by: { $0.createdAt > $1.createdAt }))
+    }
+    
+    /// 全プランク情報を取得
+    public func removePrank(id: ObjectId) {
+        realmRepository.removePrank(removeIdArray: [id])
+        readAllPranks()
     }
     
     public func getSumTime() -> Int {

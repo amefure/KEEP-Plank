@@ -12,6 +12,7 @@ struct TimeLineView: View {
     @EnvironmentObject private var rootEnvironment: RootEnvironment
     @EnvironmentObject private var viewModel: MyHistoryViewModel
     private let dateFormatUtility = DateFormatUtility(format: "d" + L10n.dayUnit)
+    private let timeFormatUtility = DateFormatUtility(format: "HH:mm")
     
     var body: some View {
         if viewModel.pranks.isEmpty {
@@ -33,7 +34,10 @@ struct TimeLineView: View {
                 ForEach(viewModel.pranks) { prank in
                     HStack {
                         Text(dateFormatUtility.getString(date: prank.createdAt))
-                            .fontWeight(.bold)
+                            .font(.system(size: 14))
+                        
+                        Text(timeFormatUtility.getString(date: prank.createdAt))
+                            .font(.system(size: 14))
                         
                         Spacer()
                         
@@ -52,9 +56,17 @@ struct TimeLineView: View {
                             .fontWeight(.bold)
                         
                     }.foregroundStyle(.white)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                            Button {
+                                viewModel.removePrank(id: prank.id)
+                            } label: {
+                                Image(systemName: "trash")
+                            }.tint(.themaRed)
+                        }
                 }.listRowBackground(Color.themaBlack)
             }.scrollContentBackground(.hidden)
                 .background(.white)
+                .font(.system(size: 17))
         }
     }
 }

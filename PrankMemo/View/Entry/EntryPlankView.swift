@@ -71,6 +71,7 @@ struct EntryPlankView: View {
             negativeButtonTitle: L10n.dialogButtonCancel,
             positiveAction: {
                 rootEnvironment.isCouting = false
+                guard viewModel.time != 0 else { return }
                 viewModel.createPrank()
                 viewModel.resetTimer()
                 showEntrySuccessDialog = true
