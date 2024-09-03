@@ -19,18 +19,38 @@ struct CustomNotifyPopUpView: View {
     public let positiveAction: () -> Void
     public let negativeAction: () -> Void
     
+    // キラキラを配置する位置
+    private let positions = [
+        CGPoint(x: DeviceSizeUtility.deviceWidth / 2, y: 70),
+        CGPoint(x: 50, y: 120),
+        CGPoint(x: DeviceSizeUtility.deviceWidth - 60, y: 200),
+        CGPoint(x: 80, y: 350),
+        CGPoint(x: DeviceSizeUtility.deviceWidth - 80, y: 450),
+        CGPoint(x: 150, y: 630)
+    ]
+    
+    // キラキラを配置する位置(SE)
+    private let positionsSE = [
+        CGPoint(x: DeviceSizeUtility.deviceWidth / 2, y: 30),
+        CGPoint(x: 50, y: 120),
+        CGPoint(x: DeviceSizeUtility.deviceWidth - 60, y: 200),
+        CGPoint(x: 65, y: 350),
+        CGPoint(x: DeviceSizeUtility.deviceWidth - 20, y: 450),
+        CGPoint(x: 150, y: 540)
+    ]
+    
     
     var body: some View {
         if isPresented {
             
             ZStack {
-               // 画面全体を覆う黒い背景
-               Color.black
-                   .opacity(0.5)
-                   .onTapGesture {
-                       // ダイアログ周りタップで閉じる
-                       // isPresented = false
-                   }
+                // 画面全体を覆う黒い背景
+                Color.black
+                    .opacity(0.5)
+                    .onTapGesture {
+                        // ダイアログ周りタップで閉じる
+                        // isPresented = false
+                    }
                 
                 // ダイアログコンテンツ部分
                 VStack(spacing: 0) {
@@ -103,24 +123,33 @@ struct CustomNotifyPopUpView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                 .overlay {
                                     RoundedRectangle(cornerRadius: 10)
-                                      .stroke(style: StrokeStyle(lineWidth: 2))
-                                      .tint(.exText)
+                                        .stroke(style: StrokeStyle(lineWidth: 2))
+                                        .tint(.exText)
                                 }
-                                
+                            
                         }
                     }
                     
                     Spacer()
                         .frame(height: 20)
-                   
+                    
                 }.frame(width: DeviceSizeUtility.deviceWidth - 60, height: 480)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-           // 画面一杯にViewを広げる
-           }.ignoresSafeArea()
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+                // キラキラアニメーション
+                ForEach(0..<6) { index in
+                    AnimationDiamondView(
+                        position: DeviceSizeUtility.isSESize ? positionsSE[safe: index] ?? CGPoint(x: 0, y: 0) : positions[safe: index] ?? CGPoint(x: 0, y: 0),
+                        index: index
+                    )
+                }
+                // 画面一杯にViewを広げる
+            }.ignoresSafeArea()
         }
     }
 }
+
 
 
 extension View {

@@ -55,6 +55,7 @@
 		12B72C552C7355AD00DCFE43 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C542C7355AD00DCFE43 /* RootView.swift */; };
 		12B72C572C7355AE00DCFE43 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B72C562C7355AE00DCFE43 /* Colors.xcassets */; };
 		12B72C5A2C7355AE00DCFE43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B72C592C7355AE00DCFE43 /* Preview Assets.xcassets */; };
+		12CF434E2C872EC9001601B2 /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF434D2C872EC9001601B2 /* DiamondShape.swift */; };
 		62228FE86D3992C64D88285C /* Pods_PrankMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2299CB0AC1184105952E6BB6 /* Pods_PrankMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		12B72C542C7355AD00DCFE43 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		12B72C562C7355AE00DCFE43 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		12B72C592C7355AE00DCFE43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		12CF434D2C872EC9001601B2 /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
 		2299CB0AC1184105952E6BB6 /* Pods_PrankMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrankMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC0119FBD0015C007FE2FE5 /* Pods-PrankMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrankMemo.release.xcconfig"; path = "Target Support Files/Pods-PrankMemo/Pods-PrankMemo.release.xcconfig"; sourceTree = "<group>"; };
 		EE4B4DFE92CBC1E26E2791E5 /* Pods-PrankMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrankMemo.debug.xcconfig"; path = "Target Support Files/Pods-PrankMemo/Pods-PrankMemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				1280A5DE2C73890000BAEE37 /* Layout */,
 				12263C3D2C80A83E00F7FE1F /* AdMobView.swift */,
+				12CF434D2C872EC9001601B2 /* DiamondShape.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				1280A5B82C73651300BAEE37 /* ExCollection.swift in Sources */,
 				1280A5CF2C73684400BAEE37 /* Strings.swift in Sources */,
 				1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */,
+				12CF434E2C872EC9001601B2 /* DiamondShape.swift in Sources */,
 				12263C382C805A2300F7FE1F /* SettingView.swift in Sources */,
 				1280A5E32C738A1300BAEE37 /* SCCalenderRepository.swift in Sources */,
 				1280A5CE2C73684400BAEE37 /* Assets.swift in Sources */,
