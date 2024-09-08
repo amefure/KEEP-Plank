@@ -23,10 +23,17 @@ class EntryPlankViewModel: ObservableObject {
     }
     
     public func onAppear() {
+        // 画面をスリープしないようにする
+        UIApplication.shared.isIdleTimerDisabled = true
         appTimerManager.time.sink { [weak self] time in
             guard let self else { return }
             self.time = time
         }.store(in: &cancellables)
+    }
+    
+    public func onDisappear() {
+        // 画面のスリープ制御をOFF
+        UIApplication.shared.isIdleTimerDisabled = false
     }
 }
 

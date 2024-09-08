@@ -14,6 +14,18 @@ struct EntryPlankView: View {
     @StateObject private var viewModel = EntryPlankViewModel()
     @State private var showEntryPopUp = false
     @State private var showEntrySuccessDialog = false
+    
+    /// 計測時間が30秒または1分ジャストの際に色を変更する
+    private func getTimeColor(_ minute: String, _ second: String) -> Color {
+        if second == "30" + L10n.secondUnit {
+            return .themaRed
+        } else if second == "0" + L10n.secondUnit && minute != "0" + L10n.minuteUnit {
+            return .themaRed
+        } else {
+            return .themaBlack
+        }
+    }
+    
     var body: some View {
         VStack {
             
@@ -26,16 +38,16 @@ struct EntryPlankView: View {
             
             HStack {
                 Spacer()
-                Text("\(minute)")
+                Text(minute)
                     .frame(alignment: .trailing)
-                Text("\(second)")
+                Text(second)
                     .frame(width: 100, alignment: .trailing)
-                Text("\(mili)")
+                Text(mili)
                     .frame(width: 60, alignment: .leading)
                 Spacer()
             }.font(.system(size: 40))
                 .fontWeight(.bold)
-                .foregroundStyle(.themaBlack)
+                .foregroundStyle(getTimeColor(minute, second))
             
             Spacer()
             
@@ -62,6 +74,8 @@ struct EntryPlankView: View {
             
         }.onAppear {
             viewModel.onAppear()
+        }.onDisappear{
+            viewModel.onDisappear()
         }.popUp(
             isPresented: $showEntryPopUp,
             title: L10n.popupPrankEntryTitle,
