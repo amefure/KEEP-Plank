@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import AudioToolbox
 
 /// プランク記録登録画面
 class EntryPlankViewModel: ObservableObject {
@@ -28,7 +29,17 @@ class EntryPlankViewModel: ObservableObject {
         appTimerManager.time.sink { [weak self] time in
             guard let self else { return }
             self.time = time
+            // 1秒経過するごとにサウンドを再生
+            if time != 0 && time % 100 == 0 {
+                playSound()
+            }
         }.store(in: &cancellables)
+    }
+    
+    /// 時間カウントサウンド
+    public func playSound() {
+        let soundId: SystemSoundID = SystemSoundID(1057)
+        AudioServicesPlaySystemSound(soundId)
     }
     
     public func onDisappear() {

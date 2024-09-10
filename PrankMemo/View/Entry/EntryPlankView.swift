@@ -18,8 +18,12 @@ struct EntryPlankView: View {
     /// 計測時間が30秒または1分ジャストの際に色を変更する
     private func getTimeColor(_ minute: String, _ second: String) -> Color {
         if second == "30" + L10n.secondUnit {
+            // 30秒でサウンドを鳴らす
+            viewModel.playSound()
             return .themaRed
         } else if second == "0" + L10n.secondUnit && minute != "0" + L10n.minuteUnit {
+            // ○分でサウンドを鳴らす
+            viewModel.playSound()
             return .themaRed
         } else {
             return .themaBlack
