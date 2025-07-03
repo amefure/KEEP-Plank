@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyHistoryTabRootView: View {
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @ObservedObject private var viewModel = MyHistoryViewModel()
+    @StateObject private var viewModel = CalendarViewModel()
     
     @State private var selectTab = 0
     

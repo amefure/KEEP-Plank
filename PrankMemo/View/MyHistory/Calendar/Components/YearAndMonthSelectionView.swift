@@ -11,7 +11,7 @@ struct YearAndMonthSelectionView: View {
     
     public var showBackButton = false
     
-    @EnvironmentObject private var viewModel: MyHistoryViewModel
+    @EnvironmentObject private var viewModel: CalendarViewModel
     
     @State private var showChart = false
     @State private var showSetting = false
@@ -24,7 +24,7 @@ struct YearAndMonthSelectionView: View {
                 .padding(.horizontal, 10)
             
             Button {
-                viewModel.backMonth()
+                viewModel.backMonthPage()
             } label: {
                 Image(systemName: "chevron.backward")
                     .resizable()
@@ -39,14 +39,20 @@ struct YearAndMonthSelectionView: View {
             
             Spacer()
             
-            Text(viewModel.getCurrentYearAndMonth())
-                    .frame(width: 100)
-                    .fontWeight(.bold)
-            
+            if let yearAndMonth = viewModel.getCurrentYearAndMonth {
+                Button {
+                    viewModel.moveTodayCalendar()
+                } label: {
+                    Text(yearAndMonth.yearAndMonth)
+                        .frame(width: 100)
+                }.frame(width: 100)
+                    .padding()
+            }
+          
             Spacer()
             
             Button {
-                viewModel.forwardMonth()
+                viewModel.forwardMonthPage()
             } label: {
                 Image(systemName: "chevron.forward")
                     .resizable()
@@ -59,19 +65,15 @@ struct YearAndMonthSelectionView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             
-            Button {
-                viewModel.moveToDayYearAndMonthCalendar()
-            } label: {
-                Image("back_today")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30)
-            }.padding(.horizontal, 10)
+            Spacer()
+                .frame(width: 30)
+                .padding(.horizontal, 10)
+            
         }.foregroundStyle(.themaBlack)
     }
 }
 
 #Preview {
     YearAndMonthSelectionView()
-        .environmentObject(MyHistoryViewModel())
+        .environmentObject(CalendarViewModel())
 }

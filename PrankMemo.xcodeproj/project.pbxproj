@@ -16,6 +16,7 @@
 		1217BB4A2C7DFCBE00BAD8A5 /* MyDataRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB492C7DFCBE00BAD8A5 /* MyDataRootView.swift */; };
 		1217BB4C2C7DFD9E00BAD8A5 /* MyDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */; };
 		1217BB4E2C7E07A100BAD8A5 /* ExModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */; };
+		1221526B2E16BD05002D884F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221526A2E16BD04002D884F /* CalendarViewModel.swift */; };
 		12263C2E2C7F4BA000F7FE1F /* NotifyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */; };
 		12263C332C7F552800F7FE1F /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C322C7F552800F7FE1F /* AppManager.swift */; };
 		12263C352C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */; };
@@ -49,7 +50,6 @@
 		1280A5E82C738A2C00BAEE37 /* SCDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5E42C738A2C00BAEE37 /* SCDate.swift */; };
 		1280A5E92C738A2C00BAEE37 /* SCWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5E52C738A2C00BAEE37 /* SCWeek.swift */; };
 		1280A5EA2C738A2C00BAEE37 /* SCYearAndMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5E62C738A2C00BAEE37 /* SCYearAndMonth.swift */; };
-		1280A5EC2C738AF000BAEE37 /* MyHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5EB2C738AF000BAEE37 /* MyHistoryViewModel.swift */; };
 		1280A5EF2C738B7200BAEE37 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280A5EE2C738B7200BAEE37 /* UserDefaultsKey.swift */; };
 		12B72C532C7355AD00DCFE43 /* PrankMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */; };
 		12B72C552C7355AD00DCFE43 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B72C542C7355AD00DCFE43 /* RootView.swift */; };
@@ -69,6 +69,7 @@
 		1217BB492C7DFCBE00BAD8A5 /* MyDataRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataRootView.swift; sourceTree = "<group>"; };
 		1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataViewModel.swift; sourceTree = "<group>"; };
 		1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExModifier.swift; sourceTree = "<group>"; };
+		1221526A2E16BD04002D884F /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyConfig.swift; sourceTree = "<group>"; };
 		12263C322C7F552800F7FE1F /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotifyPopUpView.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		1280A5E42C738A2C00BAEE37 /* SCDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDate.swift; sourceTree = "<group>"; };
 		1280A5E52C738A2C00BAEE37 /* SCWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCWeek.swift; sourceTree = "<group>"; };
 		1280A5E62C738A2C00BAEE37 /* SCYearAndMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCYearAndMonth.swift; sourceTree = "<group>"; };
-		1280A5EB2C738AF000BAEE37 /* MyHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistoryViewModel.swift; sourceTree = "<group>"; };
 		1280A5EE2C738B7200BAEE37 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		12B72C4F2C7355AD00DCFE43 /* PrankMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrankMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B72C522C7355AD00DCFE43 /* PrankMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrankMemoApp.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				1280A5C32C73668C00BAEE37 /* RootEnvironment.swift */,
-				1280A5EB2C738AF000BAEE37 /* MyHistoryViewModel.swift */,
+				1221526A2E16BD04002D884F /* CalendarViewModel.swift */,
 				1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */,
 				12263C392C807D5700F7FE1F /* SettingViewModel.swift */,
 				1280A5D92C73766600BAEE37 /* EntryPlankViewModel.swift */,
@@ -512,9 +512,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrankMemo/Pods-PrankMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrankMemo/Pods-PrankMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -570,6 +574,7 @@
 				1280A5C22C73657000BAEE37 /* RealmConfig.swift in Sources */,
 				12263C3E2C80A83E00F7FE1F /* AdMobView.swift in Sources */,
 				1280A5B82C73651300BAEE37 /* ExCollection.swift in Sources */,
+				1221526B2E16BD05002D884F /* CalendarViewModel.swift in Sources */,
 				1280A5CF2C73684400BAEE37 /* Strings.swift in Sources */,
 				1280A5B12C7364B900BAEE37 /* DeviceSizeUtility.swift in Sources */,
 				12CF434E2C872EC9001601B2 /* DiamondShape.swift in Sources */,
@@ -590,7 +595,6 @@
 				12263C332C7F552800F7FE1F /* AppManager.swift in Sources */,
 				12263C3A2C807D5700F7FE1F /* SettingViewModel.swift in Sources */,
 				1280A5DC2C73862E00BAEE37 /* CalendarView.swift in Sources */,
-				1280A5EC2C738AF000BAEE37 /* MyHistoryViewModel.swift in Sources */,
 				1217BB3C2C7CB05F00BAD8A5 /* YearAndMonthSelectionView.swift in Sources */,
 				1280A5EA2C738A2C00BAEE37 /* SCYearAndMonth.swift in Sources */,
 			);

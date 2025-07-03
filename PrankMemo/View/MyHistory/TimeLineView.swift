@@ -10,7 +10,7 @@ import SwiftUI
 struct TimeLineView: View {
     
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @EnvironmentObject private var viewModel: MyHistoryViewModel
+    @EnvironmentObject private var viewModel: CalendarViewModel
     private let dateFormatUtility = DateFormatUtility(format: "d" + L10n.dayUnit)
     private let timeFormatUtility = DateFormatUtility(format: "HH:mm")
     
