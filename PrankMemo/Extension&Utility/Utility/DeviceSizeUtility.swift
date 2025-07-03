@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DeviceSizeUtility {
+final class DeviceSizeUtility: Sendable {
     
     static var deviceWidth: CGFloat {
         guard let window = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return 0 }
@@ -20,19 +20,11 @@ class DeviceSizeUtility {
     }
 
     static var isSESize: Bool {
-        if deviceWidth < 400 {
-            return true
-        } else {
-            return false
-        }
+        return deviceWidth < 400
     }
 
     static var isiPadSize: Bool {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            return true
-        } else {
-            return false
-        }
+        return UIDevice.current.userInterfaceIdiom == .pad
     }
 }
 

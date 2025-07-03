@@ -9,12 +9,7 @@ import SwiftUI
 
 struct YearAndMonthSelectionView: View {
     
-    public var showBackButton = false
-    
     @EnvironmentObject private var viewModel: CalendarViewModel
-    
-    @State private var showChart = false
-    @State private var showSetting = false
     
     var body: some View {
         
@@ -44,6 +39,7 @@ struct YearAndMonthSelectionView: View {
                     viewModel.moveTodayCalendar()
                 } label: {
                     Text(yearAndMonth.yearAndMonth)
+                        .fontM(bold: true)
                         .frame(width: 100)
                 }.frame(width: 100)
                     .padding()

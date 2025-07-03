@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DateFormatUtility {
+final class DateFormatUtility {
     
     private let df = DateFormatter()
     private var c = Calendar(identifier: .gregorian)
