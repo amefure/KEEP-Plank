@@ -7,7 +7,7 @@ target 'PrankMemo' do
 
   # Pods for PrankMemo
   pod 'Google-Mobile-Ads-SDK'
-  pod 'RealmSwift'
+  pod 'RealmSwift' , '10.37.2'
   pod 'FirebaseAnalytics'
 
 end

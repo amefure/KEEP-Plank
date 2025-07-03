@@ -76,16 +76,16 @@ PODS:
   - nanopb/decode (2.30909.1)
   - nanopb/encode (2.30909.1)
   - PromisesObjC (2.3.1)
-  - Realm (10.47.0):
-    - Realm/Headers (= 10.47.0)
-  - Realm/Headers (10.47.0)
-  - RealmSwift (10.47.0):
-    - Realm (= 10.47.0)
+  - Realm (10.37.2):
+    - Realm/Headers (= 10.37.2)
+  - Realm/Headers (10.37.2)
+  - RealmSwift (10.37.2):
+    - Realm (= 10.37.2)
 
 DEPENDENCIES:
   - FirebaseAnalytics
   - Google-Mobile-Ads-SDK
-  - RealmSwift
+  - RealmSwift (= 10.37.2)
 
 SPEC REPOS:
   trunk:
@@ -113,9 +113,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 0759d1a57ebb953965c2dfe0ba4c82e95ccc2e34
   nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
-  Realm: e43fb540ae947497e3ea8a662443256920602060
-  RealmSwift: 8b06ed06b5d16749ae0c4d91c0cba414a9e28189
+  Realm: 09e17879e909fafc5336864bff22272de9bd11bf
+  RealmSwift: adaf8f6fd925b41447089fcfab71b9b7cdc3982d
 
-PODFILE CHECKSUM: b6054ec38797d246bd502f7176d46299ca5336c8
+PODFILE CHECKSUM: ee25f3dc6beb0fc5857b8154c5645de36fbe7cd9
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.16.2
