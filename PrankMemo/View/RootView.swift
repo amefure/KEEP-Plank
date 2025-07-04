@@ -30,7 +30,12 @@ struct RootView: View {
                             .environmentObject(rootEnvironment)
                     }
                 }.environmentObject(rootEnvironment)
-            }
+            }.alert(
+                isPresented: $rootEnvironment.showEntrySuccessDialog,
+                title: L10n.dialogTitle,
+                message: L10n.dialogEntrySuccessMsg,
+                positiveButtonTitle: L10n.dialogButtonOk
+            )
         }
     }
 }

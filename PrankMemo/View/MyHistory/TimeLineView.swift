@@ -70,7 +70,7 @@ struct TimeLineView: View {
                                 .frame(width: 35, alignment: .trailing)
                             Text(mili)
                                 .frame(width: 25, alignment: .leading)
-                        }.fontM(bold: true)
+                        }.fontS(bold: true)
                         
                     }.padding(.vertical, 8)
                         .foregroundStyle(.white)
