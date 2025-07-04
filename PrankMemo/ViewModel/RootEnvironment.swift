@@ -12,6 +12,7 @@ class RootEnvironment: ObservableObject {
     static let shared = RootEnvironment()
     
     @Published var isCouting = false
+    @Published var showEntrySuccessDialog = false
 
     private let userDefaultsRepository: UserDefaultsRepository
 

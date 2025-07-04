@@ -7,11 +7,26 @@
 
 import SwiftUI
 
+/// History領域のタブ
+private enum HistoryTab: CaseIterable {
+    case calendar
+    case timeline
+    
+    var imageName: String {
+        return switch self {
+        case .calendar:
+            "calendar"
+        case .timeline:
+            "list.bullet"
+        }
+    }
+}
+
 struct MyHistoryTabRootView: View {
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @ObservedObject private var viewModel = MyHistoryViewModel()
+    @StateObject private var viewModel = CalendarViewModel()
     
-    @State private var selectTab = 0
+    @State private var selectTab: HistoryTab = .calendar
     
     var body: some View {
         VStack(spacing: 0) {
@@ -20,43 +35,15 @@ struct MyHistoryTabRootView: View {
                 .environmentObject(viewModel)
                 .padding(.bottom)
 
-            HStack {
-                Button {
-                    selectTab = 0
-                } label: {
-                    Image(systemName: "calendar")
-                        .frame(width: (DeviceSizeUtility.deviceWidth / 2) - 20, height: 30)
-                        .foregroundStyle(selectTab == 0 ? .white : .themaBlack)
-                        .background(selectTab == 0 ? .themaBlack : .white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-                
-                Rectangle()
-                    .fill(.themaBlack)
-                    .frame(width: 2, height: 40)
-                
-                Button {
-                    selectTab = 1
-                } label: {
-                    Image(systemName: "list.bullet")
-                        .frame(width: (DeviceSizeUtility.deviceWidth / 2) - 20, height: 30)
-                        .foregroundStyle(selectTab == 1 ? .white : .themaBlack)
-                        .background(selectTab == 1 ? .themaBlack : .white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-            }.padding(.horizontal)
-            
-            Rectangle()
-                .fill(.themaBlack)
-                .frame(width: DeviceSizeUtility.deviceWidth, height: 2)
+            SelectTabPickerView(selectTab: $selectTab)
                 .padding(.bottom)
             
             switch selectTab {
-            case 0:
+            case .calendar:
                 CalendarView()
                     .environmentObject(viewModel)
                     .environmentObject(rootEnvironment)
-            default:
+            case .timeline:
                 TimeLineView()
                     .environmentObject(viewModel)
                     .environmentObject(rootEnvironment)
@@ -69,4 +56,40 @@ struct MyHistoryTabRootView: View {
 #Preview {
     MyHistoryTabRootView()
         .environmentObject(RootEnvironment())
+}
+
+private struct SelectTabPickerView: View {
+    @Namespace private var tabAnimation
+    @Binding var selectTab: HistoryTab
+    var body: some View {
+        HStack {
+            
+            ForEach(HistoryTab.allCases, id: \.self) { tab in
+                Button {
+                    selectTab = tab
+                } label: {
+                  
+                    ZStack {
+                        if selectTab == tab {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: (DeviceSizeUtility.deviceWidth / 2) - 20, height: 30)
+                                .foregroundColor(.themaBlack)
+                                .matchedGeometryEffect(id: "block", in: tabAnimation)
+                        } else {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: (DeviceSizeUtility.deviceWidth / 2) - 20, height: 30)
+                                .foregroundColor(.clear)
+                        }
+                        
+                        Image(systemName: tab.imageName)
+                            .frame(width: (DeviceSizeUtility.deviceWidth / 2) - 20, height: 30)
+                            .foregroundStyle(selectTab == tab ? .white : .themaBlack)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                }
+            }
+        }.background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .shadow(color: .black.opacity(0.2), radius: 5, x: 3, y: 3)
+    }
 }

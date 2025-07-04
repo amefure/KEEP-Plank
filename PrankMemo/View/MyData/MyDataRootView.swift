@@ -184,6 +184,11 @@ struct MyDataRootView: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.themaBlack)
                 
+                
+                AdMobBannerView()
+                    .frame(height: 80)
+                    .padding(.top, 15)
+                
                 Spacer()
             }
         }.foregroundStyle(.exText)

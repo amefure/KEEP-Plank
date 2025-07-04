@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingView: View {
     
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @ObservedObject private var viewModel = SettingViewModel()
+    private var viewModel = SettingViewModel()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -54,9 +54,11 @@ struct SettingView: View {
                         Link(destination: url, label: {
                             HStack {
                                 Image(systemName: "hand.thumbsup")
+                                    .frame(width: 30)
+                                    .foregroundColor(.themaYellow)
                                 Text(L10n.settingSectionLinkReview)
                             }.foregroundStyle(.white)
-                        }).listRowBackground(Color.themaBlack)
+                        }).listRowHeight()
                     }
                     
                     // 2:シェアボタン
@@ -68,20 +70,24 @@ struct SettingView: View {
                     } label: {
                         HStack {
                             Image(systemName: "star.bubble")
+                                .frame(width: 30)
+                                .foregroundColor(.themaYellow)
                             
                             Text(L10n.settingSectionLinkRecommend)
                         }.foregroundStyle(.white)
-                    }.listRowBackground(Color.themaBlack)
+                    }.listRowHeight()
                     
                     if let url = URL(string: StaticUrls.APP_CONTACT_URL) {
                         // 3:お問い合わせフォーム
                         Link(destination: url, label: {
                             HStack {
                                 Image(systemName: "paperplane")
+                                    .frame(width: 30)
+                                    .foregroundColor(.themaYellow)
                                 Text(L10n.settingSectionLinkContact)
                                 Image(systemName: "link").font(.caption)
                             }.foregroundStyle(.white)
-                        }).listRowBackground(Color.themaBlack)
+                        }).listRowHeight()
                     }
                     
                     if let url = URL(string: StaticUrls.APP_TERMS_OF_SERVICE_URL) {
@@ -89,17 +95,48 @@ struct SettingView: View {
                         Link(destination: url, label: {
                             HStack {
                                 Image(systemName: "note.text")
+                                    .frame(width: 30)
+                                    .foregroundColor(.themaYellow)
                                 Text(L10n.settingSectionLinkTerms)
                                 Image(systemName: "link").font(.caption)
                             }.foregroundStyle(.white)
-                        }).listRowBackground(Color.themaBlack)
+                        }).listRowHeight()
+                          
                     }
-                }
+                      
+                }.listRowBackground(Color.themaBlack)
+                    .listRowSeparatorTint(.white)
+                
+                Section {
+                    HStack {
+                        Spacer()
+                        VStack(alignment: .center, spacing: 4) {
+                            Asset.Images.appIcon.swiftUIImage
+                                .resizable()
+                                .padding(5)
+                                .frame(width: 50, height: 50)
+                                .background(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 50))
+                                .padding(.bottom, 8)
+                                .shadow(color: .gray,radius: 3, x: 2, y: 2)
+
+                            Text("KEEP PLANK Ver \(viewModel.getVersion())")
+                            Text("Created by Shibuya")
+                        }.fontSS()
+                        Spacer()
+                    }
+                }.listRowBackground(Color.clear)
             }.scrollContentBackground(.hidden)
                 .background(.white)
             
         }.foregroundStyle(.exText)
             .navigationBarBackButtonHidden()
+    }
+}
+
+private extension View {
+    func listRowHeight(height: CGFloat = 37) -> some View {
+        frame(height: height)
     }
 }
 

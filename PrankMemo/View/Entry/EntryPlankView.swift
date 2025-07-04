@@ -13,7 +13,6 @@ struct EntryPlankView: View {
     // 親Viewで更新が走りEntryPrankViewが再描画されるためObservedObjectだと画面が更新されない
     @StateObject private var viewModel = EntryPlankViewModel()
     @State private var showEntryPopUp = false
-    @State private var showEntrySuccessDialog = false
     
     /// 計測時間が30秒または1分ジャストの際に色を変更する
     private func getTimeColor(_ minute: String, _ second: String) -> Color {
@@ -92,17 +91,12 @@ struct EntryPlankView: View {
                 guard viewModel.time != 0 else { return }
                 viewModel.createPrank()
                 viewModel.resetTimer()
-                showEntrySuccessDialog = true
+                rootEnvironment.showEntrySuccessDialog = true
             },
             negativeAction: {
                 rootEnvironment.isCouting = false
                 viewModel.resetTimer()
             }
-        ).dialog(
-            isPresented: $showEntrySuccessDialog,
-            title: L10n.dialogTitle,
-            message: L10n.dialogEntrySuccessMsg,
-            positiveButtonTitle: L10n.dialogButtonOk
         )
     }
 }

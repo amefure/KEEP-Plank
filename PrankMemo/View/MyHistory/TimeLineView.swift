@@ -10,8 +10,8 @@ import SwiftUI
 struct TimeLineView: View {
     
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @EnvironmentObject private var viewModel: MyHistoryViewModel
-    private let dateFormatUtility = DateFormatUtility(format: "d" + L10n.dayUnit)
+    @EnvironmentObject private var viewModel: CalendarViewModel
+    private let dateFormatUtility = DateFormatUtility(format: "d")
     private let timeFormatUtility = DateFormatUtility(format: "HH:mm")
     
     var body: some View {
@@ -25,7 +25,7 @@ struct TimeLineView: View {
             
             Text(L10n.timelineNoData)
                 .foregroundStyle(.exText)
-                .fontWeight(.bold)
+                .fontM(bold: true)
             
             Spacer()
             
@@ -33,11 +33,29 @@ struct TimeLineView: View {
             List {
                 ForEach(viewModel.pranks) { prank in
                     HStack {
-                        Text(dateFormatUtility.getString(date: prank.createdAt))
-                            .font(.system(size: 14))
                         
-                        Text(timeFormatUtility.getString(date: prank.createdAt))
-                            .font(.system(size: 14))
+                        ZStack {
+                            Image(systemName: "circle.fill")
+                                .blur(radius: 2)
+                                .opacity(0.7)
+                                .scaleEffect(1.2)
+                            
+                            Image(systemName: "circle.fill")
+                                
+                        }.fontSS(bold: true)
+                       
+                        
+                        HStack(alignment: .bottom) {
+                            Text(dateFormatUtility.getString(date: prank.createdAt))
+                                .fontL(bold: true)
+                            
+                            Text(L10n.dayUnit)
+                                .fontS()
+                            
+                            Text(timeFormatUtility.getString(date: prank.createdAt))
+                                .fontS()
+                        }
+        
                         
                         Spacer()
                         
@@ -46,16 +64,16 @@ struct TimeLineView: View {
                         Spacer()
                         
                         Group {
-                            Text("\(minute)")
+                            Text(minute)
                                 .frame(alignment: .trailing)
-                            Text("\(second)")
+                            Text(second)
                                 .frame(width: 35, alignment: .trailing)
-                            Text("\(mili)")
-                                .frame(width: 20, alignment: .leading)
-                        }.font(.system(size: 14))
-                            .fontWeight(.bold)
+                            Text(mili)
+                                .frame(width: 25, alignment: .leading)
+                        }.fontS(bold: true)
                         
-                    }.foregroundStyle(.white)
+                    }.padding(.vertical, 8)
+                        .foregroundStyle(.white)
                         .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                             Button {
                                 viewModel.removePrank(id: prank.id)
@@ -64,9 +82,10 @@ struct TimeLineView: View {
                             }.tint(.themaRed)
                         }
                 }.listRowBackground(Color.themaBlack)
+                    .listRowSeparatorTint(.white)
             }.scrollContentBackground(.hidden)
                 .background(.white)
-                .font(.system(size: 17))
+              
         }
     }
 }

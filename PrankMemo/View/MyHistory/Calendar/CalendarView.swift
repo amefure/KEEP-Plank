@@ -9,33 +9,28 @@ import SwiftUI
 
 struct CalendarView: View {
     @EnvironmentObject private var rootEnvironment: RootEnvironment
-    @EnvironmentObject private var viewModel: MyHistoryViewModel
+    @EnvironmentObject  private var viewModel: CalendarViewModel
     
     private let columns = Array(repeating: GridItem(spacing: 0), count: 7)
     
     var body: some View {
-        VStack {
-            ScrollView {
+        ScrollView {
+            VStack(spacing: 0) {
     
                 LazyVGrid(columns: columns, spacing: 0) {
                     ForEach(viewModel.dayOfWeekList, id: \.self) { week in
                         Text(week.shortSymbols)
-                            .fontWeight(.bold)
                             .foregroundStyle(week.color)
-                            .opacity(0.8)
+                            .fontWeight(.bold)
                     }
-                }
+                }.padding(.vertical, 8)
+                    .frame(height: 40)
+
                 
-                CarouselCalendarView(
-                    yearAndMonths: viewModel.currentYearAndMonth,
-                    dates: viewModel.currentDates) { index in
-                        if index == 1 {
-                            viewModel.backMonth()
-                        } else {
-                            viewModel.forwardMonth()
-                        }
-                    }.background(.themaBlack)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                CarouselCalendarView()
+                    .environmentObject(viewModel)
+                   
+
                 
                 HStack {
                     
@@ -55,6 +50,7 @@ struct CalendarView: View {
                 }.roundedRectangleShadowBackView(height: 80)
                     .fontWeight(.bold)
                     .foregroundStyle(.themaBlack)
+                    .padding(.vertical, 10)
                 
                 HStack {
                     

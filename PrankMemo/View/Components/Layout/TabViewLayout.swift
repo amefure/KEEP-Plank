@@ -13,9 +13,9 @@ struct TabViewLayout<Content: View>: View {
     
     var content: Content
     
-    @Binding private var selectTab: Int
+    @Binding private var selectTab: RootTab
     
-    init(selectTab: Binding<Int>, @ViewBuilder content: () -> Content) {
+    init(selectTab: Binding<RootTab>, @ViewBuilder content: () -> Content) {
         self._selectTab = selectTab
         self.content = content()
     }
@@ -27,47 +27,24 @@ struct TabViewLayout<Content: View>: View {
             
             Spacer()
             
-            HStack {
-                Spacer()
-                
-                Button {
-                    // タイム計測中はタブ遷移を無効に
-                    if !rootEnvironment.isCouting {
-                        selectTab = 0
-                    }
-                } label: {
-                    Image(systemName: "calendar.badge.clock")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25, height: 25)
-                }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
-                    .disabled(rootEnvironment.isCouting)
-                
-                Spacer()
-                
-                Button {
-                    selectTab = 1
-                } label: {
-                    Image(systemName: "house.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25, height: 25)
-                }.foregroundStyle(.white)
-                
-                Spacer()
-                
-                Button {
-                    // タイム計測中はタブ遷移を無効に
-                    if !rootEnvironment.isCouting {
-                        selectTab = 2
-                    }
-                } label: {
-                    Image(systemName: "chart.bar")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25, height: 25)
-                }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
-                    .disabled(rootEnvironment.isCouting)
+            HStack {        
+                ForEach(RootTab.allCases, id: \.self) { tab in
+                    
+                    Spacer()
+                    
+                    Button {
+                        // タイム計測中はタブ遷移を無効に
+                        if !rootEnvironment.isCouting {
+                            selectTab = tab
+                        }
+                    } label: {
+                        Image(systemName: tab.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                    }.foregroundStyle(rootEnvironment.isCouting ? .gray : .white)
+                        .disabled(rootEnvironment.isCouting)
+                }
                 
                 Spacer()
             }.frame(width: DeviceSizeUtility.deviceWidth - 40, height: 60)
@@ -79,7 +56,7 @@ struct TabViewLayout<Content: View>: View {
 }
 
 #Preview {
-    TabViewLayout(selectTab: Binding.constant(0)) {
+    TabViewLayout(selectTab: Binding.constant(.entryPlank)) {
         Text("Test")
     }
 }
