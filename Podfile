@@ -1,5 +1,5 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# プロジェクト全体の最小対応 iOS バージョン
+platform :ios, '16.0'
 
 target 'PrankMemo' do
   # Comment the next line if you don't want to use dynamic frameworks
