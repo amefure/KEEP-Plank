@@ -17,6 +17,7 @@
 		1217BB4C2C7DFD9E00BAD8A5 /* MyDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */; };
 		1217BB4E2C7E07A100BAD8A5 /* ExModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */; };
 		1221526B2E16BD05002D884F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221526A2E16BD04002D884F /* CalendarViewModel.swift */; };
+		1221526D2E16D110002D884F /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221526C2E16D110002D884F /* RootTab.swift */; };
 		12263C2E2C7F4BA000F7FE1F /* NotifyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */; };
 		12263C332C7F552800F7FE1F /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C322C7F552800F7FE1F /* AppManager.swift */; };
 		12263C352C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */; };
@@ -70,6 +71,7 @@
 		1217BB4B2C7DFD9E00BAD8A5 /* MyDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataViewModel.swift; sourceTree = "<group>"; };
 		1217BB4D2C7E07A100BAD8A5 /* ExModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExModifier.swift; sourceTree = "<group>"; };
 		1221526A2E16BD04002D884F /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		1221526C2E16D110002D884F /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
 		12263C2D2C7F4BA000F7FE1F /* NotifyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyConfig.swift; sourceTree = "<group>"; };
 		12263C322C7F552800F7FE1F /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		12263C342C7F6DE400F7FE1F /* CustomNotifyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotifyPopUpView.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				1280A5A72C73636000BAEE37 /* Plank.swift */,
+				1221526C2E16D110002D884F /* RootTab.swift */,
 				12263C3B2C807DBD00F7FE1F /* StaticUrls.swift */,
 				1280A5ED2C738B6800BAEE37 /* Key */,
 				1280A5E72C738A2C00BAEE37 /* SCCalendar */,
@@ -557,6 +560,7 @@
 				1280A5AB2C7363E200BAEE37 /* RepositoryDependency.swift in Sources */,
 				1280A5C42C73668C00BAEE37 /* RootEnvironment.swift in Sources */,
 				1217BB462C7DA72600BAD8A5 /* MyHistoryTabRootView.swift in Sources */,
+				1221526D2E16D110002D884F /* RootTab.swift in Sources */,
 				1217BB3F2C7CC09100BAD8A5 /* CustomNotifyDialogView.swift in Sources */,
 				12263C2E2C7F4BA000F7FE1F /* NotifyConfig.swift in Sources */,
 				1280A5EF2C738B7200BAEE37 /* UserDefaultsKey.swift in Sources */,
@@ -743,7 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"PrankMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
@@ -763,7 +767,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.PrankMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -781,7 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"PrankMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
@@ -801,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ame.PrankMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

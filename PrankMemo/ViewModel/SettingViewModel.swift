@@ -7,14 +7,7 @@
 
 import UIKit
 
-class SettingViewModel: ObservableObject {
-  
-
-    init(repositoryDependency: RepositoryDependency = RepositoryDependency()) {
-    }
-
-    public func onAppear() {
-    }
+final class SettingViewModel {
 
     /// アプリシェアロジック
     public func shareApp(shareText: String, shareLink: String) {
@@ -30,6 +23,11 @@ class SettingViewModel: ObservableObject {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let rootVC = windowScene?.windows.first?.rootViewController
         rootVC?.present(activityVC, animated: true, completion: {})
+    }
+    
+    /// バージョン番号取得
+    public func getVersion() -> String {
+        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.0"
     }
 }
 

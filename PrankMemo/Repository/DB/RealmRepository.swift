@@ -48,15 +48,6 @@ class RealmRepository {
         }
     }
 
-    /// Update
-    public func updatePrank(id: ObjectId, newPrank: Plank) {
-        try! realm.write {
-            guard let result = realm.objects(Plank.self).where({ $0.id == id }).first else {
-                return
-            }
-        }
-    }
-
     /// Remove
     public func removePrank(removeIdArray: [ObjectId]) {
         let predicate = NSPredicate(format: "id IN %@", removeIdArray)

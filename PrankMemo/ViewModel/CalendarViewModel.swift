@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 
 class CalendarViewModel: ObservableObject {
-    @MainActor static let shared = CalendarViewModel()
 
     private let dateFormatUtility = DateFormatUtility()
 
@@ -181,7 +180,7 @@ extension CalendarViewModel {
         // 今月を表示しているなら更新しない
         guard displayYearAndMonth.month != month else { return }
         guard let todayIndex = currentYearAndMonth.firstIndex(where: { $0.year == year && $0.month == month }) else { return }
-        displayCalendarIndex = CGFloat(todayIndex)
+        scCalenderRepository.setDisplayCalendarIndex(index: todayIndex)
     }
 
     // 更新対象のインデックス番号を取得する

@@ -44,13 +44,9 @@ struct CustomNotifyPopUpView: View {
         if isPresented {
             
             ZStack {
-                // 画面全体を覆う黒い背景
-                Color.black
+                // 画面全体を覆う背景
+                Color.clear
                     .opacity(0.5)
-                    .onTapGesture {
-                        // ダイアログ周りタップで閉じる
-                        // isPresented = false
-                    }
                 
                 // ダイアログコンテンツ部分
                 VStack(spacing: 0) {
@@ -104,6 +100,7 @@ struct CustomNotifyPopUpView: View {
                                 .frame(width: 250, height: 50)
                                 .background(.themaRed)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .shadow(color: .gray,radius: 3, x: 2, y: 2)
                         }
                     }
                     
@@ -126,6 +123,8 @@ struct CustomNotifyPopUpView: View {
                                         .stroke(style: StrokeStyle(lineWidth: 2))
                                         .tint(.exText)
                                 }
+                                .clipped()
+                                .shadow(color: .gray,radius: 3, x: 2, y: 2)
                             
                         }
                     }
@@ -146,6 +145,8 @@ struct CustomNotifyPopUpView: View {
                 }
                 // 画面一杯にViewを広げる
             }.ignoresSafeArea()
+                .background(.ultraThinMaterial)
+                
         }
     }
 }

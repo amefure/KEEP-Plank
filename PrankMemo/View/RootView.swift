@@ -8,23 +8,24 @@
 import SwiftUI
 
 
+
 struct RootView: View {
     
     @ObservedObject private var rootEnvironment = RootEnvironment.shared
-    @State private var selectTab = 1
+    @State private var selectTab: RootTab = .entryPlank
    
     var body: some View {
         VStack(spacing: 0) {
             NavigationStack {
                 TabViewLayout(selectTab: $selectTab) {
                     switch selectTab {
-                    case 0:
+                    case .myHistory:
                         MyHistoryTabRootView()
                             .environmentObject(rootEnvironment)
-                    case 1:
+                    case .entryPlank:
                         EntryPlankView()
                             .environmentObject(rootEnvironment)
-                    default:
+                    case .myData:
                         MyDataRootView()
                             .environmentObject(rootEnvironment)
                     }
